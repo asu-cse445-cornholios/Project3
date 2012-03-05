@@ -13,10 +13,15 @@ public class Service : IService
         Web2String.ServiceClient webProxy = new Web2String.ServiceClient();
         string webContent = webProxy.GetWebContent(url);
 
-        string[] sep = new string[2];
+
+        string pattern = "{wsdl}";//?wsdl
+
+       /* string[] sep = new string[2];
         sep[0] = ".wsdl";
         sep[1] = "?wsdl";
-        string[] sites = webContent.Split(sep, System.StringSplitOptions.None);
+        string[] sites = webContent.Split(sep, System.StringSplitOptions.RemoveEmptyEntries);*/
+        
+        string[] sites = System.Text.RegularExpressions.Regex.Split(webContent, pattern, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
         
         return sites;
 	}
