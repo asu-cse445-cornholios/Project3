@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f07243f2-9142-49c2-9825-2fc3a93cc844" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c1b895e6-14da-48e7-8881-36f77ae94e9c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <EnableDataBinding>true</EnableDataBinding>
@@ -18,14 +18,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:1840/Service1.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:1840/RyanService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="72f5ab6a-855e-4b18-a51a-a3210995d21b" SourceId="1" SourceUrl="http://localhost:1840/Service1.svc?xsd=xsd2" />
-    <MetadataFile FileName="Service11.xsd" MetadataType="Schema" ID="47e09d55-7d40-4ae9-a89a-56c013c90b3f" SourceId="1" SourceUrl="http://localhost:1840/Service1.svc?xsd=xsd1" />
-    <MetadataFile FileName="Service12.xsd" MetadataType="Schema" ID="e5332fa8-2fb2-4a15-a99e-bcc97c4c9a95" SourceId="1" SourceUrl="http://localhost:1840/Service1.svc?xsd=xsd0" />
-    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="60569593-d884-445d-a5fd-e23db8a820d4" SourceId="1" SourceUrl="http://localhost:1840/Service1.svc?wsdl" />
-    <MetadataFile FileName="Service1.disco" MetadataType="Disco" ID="6616fb6e-2120-4026-a6b3-2aa31af64579" SourceId="1" SourceUrl="http://localhost:1840/Service1.svc?disco" />
+    <MetadataFile FileName="RyanService.disco" MetadataType="Disco" ID="a541fc5c-caf1-4bb2-80e0-f6c1671574bd" SourceId="1" SourceUrl="http://localhost:1840/RyanService.svc?disco" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="21129cfc-67e3-4ec6-aa32-9426344d786c" SourceId="1" SourceUrl="http://localhost:1840/RyanService.svc?wsdl" />
+    <MetadataFile FileName="RyanService.xsd" MetadataType="Schema" ID="cee12926-7001-4f09-ad71-370d9aa930a7" SourceId="1" SourceUrl="http://localhost:1840/RyanService.svc?xsd=xsd2" />
+    <MetadataFile FileName="RyanService1.xsd" MetadataType="Schema" ID="e98b6f3b-d3aa-4702-8d7b-fdda4b4755fa" SourceId="1" SourceUrl="http://localhost:1840/RyanService.svc?xsd=xsd1" />
+    <MetadataFile FileName="RyanService2.xsd" MetadataType="Schema" ID="b9a78041-01f5-4f77-be8b-21953f13a0c2" SourceId="1" SourceUrl="http://localhost:1840/RyanService.svc?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

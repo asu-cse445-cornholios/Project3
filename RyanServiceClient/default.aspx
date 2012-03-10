@@ -13,8 +13,9 @@
         <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
         <asp:Button ID="Button1" runat="server" onclick="Button1_Click" Text="Button" />
         <br />
+        <asp:TextBox ID="TextBox2" runat="server" Height="98px" Rows="4" 
+            TextMode="MultiLine" Width="213px"></asp:TextBox>
         <br />
-        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
     
     </div>
     </form>

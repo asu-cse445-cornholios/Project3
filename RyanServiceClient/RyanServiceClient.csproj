@@ -53,14 +53,14 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\ServiceProxy\Service1.disco" />
+    <Content Include="default.aspx" />
+    <None Include="Service References\ServiceProxy\RyanService.disco" />
     <None Include="Service References\ServiceProxy\configuration91.svcinfo" />
     <None Include="Service References\ServiceProxy\configuration.svcinfo" />
     <None Include="Service References\ServiceProxy\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <Content Include="default.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -68,9 +68,16 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <None Include="Service References\ServiceProxy\WebClient.ServiceProxy.CompositeType.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Service References\ServiceProxy\RyanService.xsd">
+      <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\ServiceProxy\RyanService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceProxy\RyanService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceProxy\Service1.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="default.aspx.cs">
@@ -92,18 +99,6 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\ServiceProxy\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\ServiceProxy\Service1.wsdl" />
-    <None Include="Service References\ServiceProxy\Service1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ServiceProxy\Service11.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ServiceProxy\Service12.xsd">
-      <SubType>Designer</SubType>
-    </None>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

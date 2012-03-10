@@ -16,10 +16,15 @@ namespace WebClient
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            ServiceProxy.Service1Client client = new ServiceProxy.Service1Client();
+            ServiceProxy.RyanServiceClient client = new ServiceProxy.RyanServiceClient();
 
-            string response = client.GetData(int.Parse(TextBox1.Text));
-            Label1.Text = response;
+            string[] response = client.getWsOperations(TextBox1.Text);
+
+            TextBox2.Text = "";
+            foreach (string s in response)
+            {
+                TextBox2.Text += s + "\n";
+            }
         }
     }
 }
