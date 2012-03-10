@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="831d7285-b781-438d-8105-819e16aa2e8e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:4157/reqdServices.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Top10Words.wsdl" MetadataType="Wsdl" ID="3bab7558-5fe3-412f-bf24-99338fdacc1f" SourceId="1" SourceUrl="http://localhost:4157/reqdServices.svc?wsdl" />
+    <MetadataFile FileName="reqdServices.xsd" MetadataType="Schema" ID="abcecf63-d45e-4768-9431-ba99ee467d86" SourceId="1" SourceUrl="http://localhost:4157/reqdServices.svc?xsd=xsd2" />
+    <MetadataFile FileName="reqdServices1.xsd" MetadataType="Schema" ID="e3f9242c-8860-482c-bacd-db028ff5c1ab" SourceId="1" SourceUrl="http://localhost:4157/reqdServices.svc?xsd=xsd1" />
+    <MetadataFile FileName="reqdServices2.xsd" MetadataType="Schema" ID="747ae75d-9261-4718-87d2-39b64b2b3ede" SourceId="1" SourceUrl="http://localhost:4157/reqdServices.svc?xsd=xsd0" />
+    <MetadataFile FileName="reqdServices.disco" MetadataType="Disco" ID="3c80b665-94ff-4195-a755-11997079fd59" SourceId="1" SourceUrl="http://localhost:4157/reqdServices.svc?disco" />
+    <MetadataFile FileName="reqdServices3.xsd" MetadataType="Schema" ID="14018ebe-71d4-478a-97c1-5e9457cbf787" SourceId="1" SourceUrl="http://localhost:4157/reqdServices.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

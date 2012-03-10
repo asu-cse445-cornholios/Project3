@@ -1,7 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Top10Words", "Top10Words\Top10Words.csproj", "{E34F3D54-FDE3-4053-A8AD-E077C03DBFFC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RequiredServices", "Top10Words\RequiredServices.csproj", "{E34F3D54-FDE3-4053-A8AD-E077C03DBFFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryIt", "TryIt\TryIt.csproj", "{D07D394C-5256-438B-9194-BE96C9BF0F05}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E34F3D54-FDE3-4053-A8AD-E077C03DBFFC} = {E34F3D54-FDE3-4053-A8AD-E077C03DBFFC}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +18,10 @@ Global
 		{E34F3D54-FDE3-4053-A8AD-E077C03DBFFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E34F3D54-FDE3-4053-A8AD-E077C03DBFFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E34F3D54-FDE3-4053-A8AD-E077C03DBFFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D07D394C-5256-438B-9194-BE96C9BF0F05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D07D394C-5256-438B-9194-BE96C9BF0F05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D07D394C-5256-438B-9194-BE96C9BF0F05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D07D394C-5256-438B-9194-BE96C9BF0F05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

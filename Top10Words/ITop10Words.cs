@@ -6,6 +6,7 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 
+
 namespace Top10Words
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService1" in both code and config file together.
@@ -14,7 +15,7 @@ namespace Top10Words
     {
 
         [OperationContract]
-        string GetData(int value);
+        string[] top10Words(string url);
 
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
