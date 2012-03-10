@@ -1,0 +1,6 @@
+C:\Users\Rebecca Bever\Project3\testWCF\bin\Debug\testWCF.exe.config
+C:\Users\Rebecca Bever\Project3\testWCF\bin\Debug\testWCF.exe
+C:\Users\Rebecca Bever\Project3\testWCF\bin\Debug\testWCF.pdb
+C:\Users\Rebecca Bever\Project3\testWCF\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Rebecca Bever\Project3\testWCF\obj\x86\Debug\testWCF.exe
+C:\Users\Rebecca Bever\Project3\testWCF\obj\x86\Debug\testWCF.pdb
