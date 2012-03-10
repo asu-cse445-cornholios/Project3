@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RyanService", "RyanService\RyanService.csproj", "{2AB93F4D-475F-4098-A0EE-1333D95381E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebClient", "WebClient\WebClient.csproj", "{C53C80AA-7332-4997-8294-1D9505A1A5B6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RyanServiceClient", "RyanServiceClient\RyanServiceClient.csproj", "{C53C80AA-7332-4997-8294-1D9505A1A5B6}"
 	ProjectSection(ProjectDependencies) = postProject
 		{2AB93F4D-475F-4098-A0EE-1333D95381E5} = {2AB93F4D-475F-4098-A0EE-1333D95381E5}
 	EndProjectSection
