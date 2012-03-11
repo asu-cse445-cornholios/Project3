@@ -9,15 +9,12 @@ namespace RyanTester
     {
         static void Main(string[] args)
         {
-            //OperationInfo info = OperationInfo.fromURL("http://localhost:1840/RyanService.svc?wsdl");
-            //string[] results = info.getOperations();
 
-            //foreach (string s in results)
-            //{
-            //    System.Console.WriteLine(s);
-            //}
-
-            Class1.test("http://localhost:1840/RyanService.svc?wsdl");
+            WsdlOperationInfo info = WsdlOperationInfo.fromURL("http://localhost:1840/RyanService.svc?wsdl");
+            foreach (string op in info.getOperationsArray())
+            {
+                System.Console.WriteLine(op);
+            }
         }
     }
 }
