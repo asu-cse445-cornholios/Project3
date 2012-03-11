@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="\\webstrar.fulton.asu.edu\website6\page2\sub" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="AddressTry.aspx" publishTime="03/10/2012 23:43:52" />
+    <file relUrl="bin/Address.dll" publishTime="03/11/2012 00:21:09" />
+    <file relUrl="Service1.svc" publishTime="03/10/2012 17:40:55" />
+    <file relUrl="bin/Address.pdb" publishTime="03/11/2012 00:21:09" />
+    <file relUrl="Web.config" publishTime="03/11/2012 00:26:16" />
+  </publishProfile>
+</publishData>

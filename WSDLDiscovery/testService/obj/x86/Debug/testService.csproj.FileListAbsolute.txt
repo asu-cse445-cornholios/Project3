@@ -1,0 +1,6 @@
+C:\Users\Rebecca Bever\Documents\cse445\Project3all\WSDLDiscovery\testService\bin\Debug\testService.exe.config
+C:\Users\Rebecca Bever\Documents\cse445\Project3all\WSDLDiscovery\testService\bin\Debug\testService.exe
+C:\Users\Rebecca Bever\Documents\cse445\Project3all\WSDLDiscovery\testService\bin\Debug\testService.pdb
+C:\Users\Rebecca Bever\Documents\cse445\Project3all\WSDLDiscovery\testService\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Rebecca Bever\Documents\cse445\Project3all\WSDLDiscovery\testService\obj\x86\Debug\testService.exe
+C:\Users\Rebecca Bever\Documents\cse445\Project3all\WSDLDiscovery\testService\obj\x86\Debug\testService.pdb

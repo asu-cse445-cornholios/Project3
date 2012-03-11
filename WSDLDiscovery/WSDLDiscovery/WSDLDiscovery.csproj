@@ -53,6 +53,36 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Service References\bingSearch\search.wsdl" />
+    <None Include="Service References\bingSearch\WSDLDiscovery.bingSearch.SearchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Web2String\Service.disco" />
+    <None Include="Service References\Web2String\configuration91.svcinfo" />
+    <None Include="Service References\Web2String\configuration.svcinfo" />
+    <None Include="Service References\Web2String\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\bingSearch\configuration91.svcinfo" />
+    <None Include="Service References\bingSearch\configuration.svcinfo" />
+    <None Include="Service References\bingSearch\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\WSDLAddress\configuration91.svcinfo" />
+    <None Include="Service References\WSDLAddress\configuration.svcinfo" />
+    <None Include="Service References\WSDLAddress\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Discovery.aspx" />
+    <None Include="Service References\DiscoveryService\configuration91.svcinfo" />
+    <None Include="Service References\DiscoveryService\configuration.svcinfo" />
+    <None Include="Service References\DiscoveryService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Service1.svc" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -61,8 +91,62 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <None Include="Service References\Web2String\Service.wsdl" />
+    <None Include="Service References\Web2String\Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Web2String\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WSDLAddress\Service.wsdl" />
+    <None Include="Service References\WSDLAddress\Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WSDLAddress\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WSDLAddress\Service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiscoveryService\Service1.wsdl" />
+    <None Include="Service References\DiscoveryService\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiscoveryService\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiscoveryService\Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Discovery.aspx.cs">
+      <DependentUpon>Discovery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Discovery.aspx.designer.cs">
+      <DependentUpon>Discovery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\bingSearch\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Web2String\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WSDLAddress\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DiscoveryService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service1.svc.cs">
       <DependentUpon>Service1.svc</DependentUpon>
     </Compile>
@@ -71,6 +155,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\bingSearch\" />
+    <WCFMetadataStorage Include="Service References\Web2String\" />
+    <WCFMetadataStorage Include="Service References\WSDLAddress\" />
+    <WCFMetadataStorage Include="Service References\DiscoveryService\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

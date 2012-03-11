@@ -1,0 +1,5 @@
+C:\Users\Rebecca Bever\Documents\cse445\Project3all\WSDLDiscovery\WSDLDiscovery\bin\WSDLDiscovery.dll
+C:\Users\Rebecca Bever\Documents\cse445\Project3all\WSDLDiscovery\WSDLDiscovery\bin\WSDLDiscovery.pdb
+C:\Users\Rebecca Bever\Documents\cse445\Project3all\WSDLDiscovery\WSDLDiscovery\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Rebecca Bever\Documents\cse445\Project3all\WSDLDiscovery\WSDLDiscovery\obj\Debug\WSDLDiscovery.dll
+C:\Users\Rebecca Bever\Documents\cse445\Project3all\WSDLDiscovery\WSDLDiscovery\obj\Debug\WSDLDiscovery.pdb
