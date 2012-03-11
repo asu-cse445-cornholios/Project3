@@ -19,7 +19,7 @@ namespace WebClient
             ServiceProxy.RyanServiceClient client = new ServiceProxy.RyanServiceClient();
 
             string[] response = client.getWsOperations(TextBox1.Text);
-
+            
             TextBox2.Text = "";
             foreach (string s in response)
             {
