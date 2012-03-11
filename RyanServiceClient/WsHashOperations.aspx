@@ -10,12 +10,21 @@
     <form id="form1" runat="server">
     <div>
     
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-        <asp:Button ID="Button1" runat="server" Text="Button" />
+        <div style="font-size: x-large; background-color: #0000FF; color: #FFFFFF; font-weight: bolder; height: 31px;">
+            WsHashOperations<br />
+        </div>
+        <div>
+        </div>
+        <asp:Label ID="Label1" runat="server" Text="Url:     " Width="50px"></asp:Label>
+    
+        <asp:TextBox ID="txtInput" runat="server" Width="595px"></asp:TextBox>
+        <asp:Button ID="btnInvoke" runat="server" Text="Invoke" 
+            onclick="btnInvoke_Click" />
     
     </div>
     <p>
-        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtResponse" runat="server" Height="183px" ReadOnly="True" 
+            TextMode="MultiLine" Width="715px"></asp:TextBox>
     </p>
     </form>
 </body>

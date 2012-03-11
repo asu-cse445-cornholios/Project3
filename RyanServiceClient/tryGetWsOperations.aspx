@@ -10,14 +10,20 @@
     <form id="form1" runat="server">
     <div>
     
-        <asp:TextBox ID="txtInput" runat="server"></asp:TextBox>
+        <div style="height: 34px; font-weight: bolder; color: #FFFFFF; background-color: #0000FF; font-size: x-large;">
+            GetWsOperations</div>
+        <div>
+        </div>
+        <asp:Label ID="Label1" runat="server" Text="url" Width="50px"></asp:Label>
+    
+        <asp:TextBox ID="txtInput" runat="server" Width="623px"></asp:TextBox>
         <asp:Button ID="btnInvoke" runat="server" onclick="btnInvoke_Click" 
             Text="Invoke" />
     
     </div>
     <p>
-        <asp:TextBox ID="txtResponse" runat="server" Height="102px" ReadOnly="True" 
-            TextMode="MultiLine" Width="217px"></asp:TextBox>
+        <asp:TextBox ID="txtResponse" runat="server" Height="194px" ReadOnly="True" 
+            TextMode="MultiLine" Width="729px"></asp:TextBox>
     </p>
     </form>
 </body>
