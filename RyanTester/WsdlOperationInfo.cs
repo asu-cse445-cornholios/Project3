@@ -67,18 +67,14 @@ namespace RyanTester
 
                 foreach (string par in op.inTypes)
                 {
-                    if (ins == "")
-                        ins = par;
-                    else
-                        ins += ", " + par;
+                    if (ins == "") ins = par;
+                    else ins += ", " + par;
                 }
 
                 foreach (string par in op.outTypes)
                 {
-                    if (outs == "")
-                        outs = par;
-                    else
-                        outs += ", " + par;
+                    if (outs == "") outs = par;
+                    else outs += ", " + par;
                 }
 
                 output.Add(outs + " " + name + "(" + ins + ")");
@@ -87,9 +83,44 @@ namespace RyanTester
             return output.ToArray();
         }
 
+        /// <summary>
+        /// Gets a Hashtable of strings of all available operations with parameters
+        /// </summary>
+        /// <returns></returns>
         public Hashtable getOperationsHashtable()
         {
-            return null;
+            Hashtable retObj = new Hashtable();
+
+            foreach (Operation op in operations)
+            {
+                string name = op.Name;
+                string types = "";
+
+                foreach (string outType in op.outTypes)
+                {
+                    if (types == "") types = outType;
+                    else types += ", " + outType;
+                }
+
+                foreach (string inType in op.inTypes)
+                {
+                    if (types == "") types = inType;
+                    else types += ", " + inType;
+                }
+
+                try
+                {
+                    retObj.Add(name, types);
+                }
+                catch
+                {
+                    //already exists
+                }
+                
+
+            }
+
+            return retObj;
         }
 
         /// <summary>
