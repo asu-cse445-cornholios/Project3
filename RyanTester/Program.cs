@@ -17,8 +17,7 @@ namespace RyanTester
             //    System.Console.WriteLine(s);
             //}
 
-            //Class1.test("http://localhost:1840/RyanService.svc?wsdl");
-            Class1.test("http://www.restfulwebservices.net/wcf/CurrencyService.svc?wsdl");
+            Class1.test("http://localhost:1840/RyanService.svc?wsdl");
         }
     }
 }

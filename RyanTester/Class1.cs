@@ -14,6 +14,8 @@ namespace RyanTester
 
         public static void test(string metadataAddress)
         {
+            bool debug = false;
+
             MetadataExchangeClient mexClient = new MetadataExchangeClient(new Uri(metadataAddress), MetadataExchangeClientMode.HttpGet);
             mexClient.ResolveMetadataReferences = true;
             MetadataSet metaDocs = mexClient.GetMetadata();
@@ -57,35 +59,54 @@ namespace RyanTester
             foreach (ContractDescription contract in contracts)
             {
                 generator.GenerateServiceContractType(contract);
-                System.Console.WriteLine("Contract name: " + contract.Name);
+                if (debug) System.Console.WriteLine("Contract name: " + contract.Name);
                 foreach (var operation in contract.Operations)
                 {
-                    System.Console.WriteLine("Operation name: " + operation.Name);
+                    string operationName = operation.Name;
+                    string inType = "";
+                    string outType = "";
+
+                    if (debug) System.Console.WriteLine("Operation name: " + operation.Name);
                     foreach (var message in operation.Messages)
                     {
-                        System.Console.WriteLine("Message type: " + message.MessageType);
-                        System.Console.WriteLine("Message Direction: " + message.Direction);
+                        //System.Console.WriteLine("Message type: " + message.MessageType);
+                        //System.Console.WriteLine("Message Direction: " + message.Direction);
                         if (message.Direction == MessageDirection.Output)
                         {
                             if (message.Body.ReturnValue != null)
                             {
-                                System.Console.WriteLine("Messagepart Name " + message.Body.ReturnValue.Name);
-                                var crap = typeof(MessagePartDescription).GetField("baseType", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance).GetValue(message.Body.ReturnValue);
-                                System.Console.WriteLine("messagepart Type " + crap as string);
+                                if (debug) System.Console.WriteLine("Messagepart Name " + message.Body.ReturnValue.Name);
+                                var baseType = typeof(MessagePartDescription).GetField("baseType", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance).GetValue(message.Body.ReturnValue);
+                                if (debug) System.Console.WriteLine("messagepart Type " + baseType as string);
+                                if (outType == "")
+                                    outType = baseType as string;
+                                else
+                                    outType += ", " + baseType as string;
+                      
                             }
                         }
-                        foreach (var messagePart in message.Body.Parts)
+                        else //input message
                         {
-                            System.Console.WriteLine("Messagepart Name " + messagePart.Name);
-                            var crap = typeof(MessagePartDescription).GetField("baseType",System.Reflection.BindingFlags.NonPublic|System.Reflection.BindingFlags.Instance).GetValue(messagePart);
-                            System.Console.WriteLine("messagepart Type " + crap as string);
+                            foreach (var messagePart in message.Body.Parts)
+                            {
+                                if (debug) System.Console.WriteLine("Messagepart Name " + messagePart.Name);
+                                var baseType = typeof(MessagePartDescription).GetField("baseType", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance).GetValue(messagePart);
+                                if (debug) System.Console.WriteLine("messagepart Type " + baseType as string);
+                                if (inType == "")
+                                    inType = baseType as string;
+                                else
+                                    inType += ", " + baseType as string;
+                            }
                         }
                 
                     }
                 
+                    System.Console.WriteLine(outType + " " + operationName + "(" + inType + ")");
                 }
             }
 
+            
+      //used to write the code, not needed      
             // Write the code dom
       //      System.CodeDom.Compiler.CodeGeneratorOptions options
       //        = new System.CodeDom.Compiler.CodeGeneratorOptions();
