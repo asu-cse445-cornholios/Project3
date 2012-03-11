@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c1b895e6-14da-48e7-8881-36f77ae94e9c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="13f31c38-50ab-4468-86a9-efc1775e808b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <EnableDataBinding>true</EnableDataBinding>
@@ -21,11 +21,11 @@
     <MetadataSource Address="http://localhost:1840/RyanService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="RyanService.disco" MetadataType="Disco" ID="a541fc5c-caf1-4bb2-80e0-f6c1671574bd" SourceId="1" SourceUrl="http://localhost:1840/RyanService.svc?disco" />
-    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="21129cfc-67e3-4ec6-aa32-9426344d786c" SourceId="1" SourceUrl="http://localhost:1840/RyanService.svc?wsdl" />
-    <MetadataFile FileName="RyanService.xsd" MetadataType="Schema" ID="cee12926-7001-4f09-ad71-370d9aa930a7" SourceId="1" SourceUrl="http://localhost:1840/RyanService.svc?xsd=xsd2" />
-    <MetadataFile FileName="RyanService1.xsd" MetadataType="Schema" ID="e98b6f3b-d3aa-4702-8d7b-fdda4b4755fa" SourceId="1" SourceUrl="http://localhost:1840/RyanService.svc?xsd=xsd1" />
-    <MetadataFile FileName="RyanService2.xsd" MetadataType="Schema" ID="b9a78041-01f5-4f77-be8b-21953f13a0c2" SourceId="1" SourceUrl="http://localhost:1840/RyanService.svc?xsd=xsd0" />
+    <MetadataFile FileName="RyanService.disco" MetadataType="Disco" ID="db912555-a388-4779-bea2-ca9d3e7f4f20" SourceId="1" SourceUrl="http://localhost:1840/RyanService.svc?disco" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="c789d8df-f581-42b5-8016-a65cf4e6be09" SourceId="1" SourceUrl="http://localhost:1840/RyanService.svc?wsdl" />
+    <MetadataFile FileName="RyanService.xsd" MetadataType="Schema" ID="c0d00f02-d0fe-4c0e-b4f7-a4dac7224983" SourceId="1" SourceUrl="http://localhost:1840/RyanService.svc?xsd=xsd2" />
+    <MetadataFile FileName="RyanService1.xsd" MetadataType="Schema" ID="9eda3560-668e-4ed0-a3d2-2442da49ac76" SourceId="1" SourceUrl="http://localhost:1840/RyanService.svc?xsd=xsd1" />
+    <MetadataFile FileName="RyanService2.xsd" MetadataType="Schema" ID="c22a4d5a-4f6d-4117-9a57-5eb14b75118f" SourceId="1" SourceUrl="http://localhost:1840/RyanService.svc?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

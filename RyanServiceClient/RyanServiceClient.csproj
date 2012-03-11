@@ -53,7 +53,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="default.aspx" />
     <None Include="Service References\ServiceProxy\RyanService.disco" />
     <None Include="Service References\ServiceProxy\configuration91.svcinfo" />
     <None Include="Service References\ServiceProxy\configuration.svcinfo" />
@@ -61,6 +60,8 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="tryWsHashOperations.aspx" />
+    <Content Include="tryGetWsOperations.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -80,19 +81,26 @@
     <None Include="Service References\ServiceProxy\Service1.wsdl" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="default.aspx.cs">
-      <DependentUpon>default.aspx</DependentUpon>
+    <Compile Include="tryWsHashOperations.aspx.cs">
+      <DependentUpon>tryWsHashOperations.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="default.aspx.designer.cs">
-      <DependentUpon>default.aspx</DependentUpon>
+    <Compile Include="tryWsHashOperations.aspx.designer.cs">
+      <DependentUpon>tryWsHashOperations.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\ServiceProxy\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="tryGetWsOperations.aspx.cs">
+      <DependentUpon>tryGetWsOperations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tryGetWsOperations.aspx.designer.cs">
+      <DependentUpon>tryGetWsOperations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

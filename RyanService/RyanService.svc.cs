@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -8,15 +9,20 @@ using System.Text;
 
 namespace RyanService
 {
-    public class Service1 : IRyanService
+    public class RyanService : IRyanService
     {
+        //Required Service 7
         public string[] getWsOperations(string url)
         {
-            string[] data = new string[2];
-            data[0] = url;
-            data[1] = "eol";
-            
-            return data;
+            WsdlOperationInfo info = WsdlOperationInfo.fromURL(url);
+            return info.getOperationsArray();
+        }
+
+        //Required Service 8
+        public Hashtable WsHashOperations(string wsdlUrl)
+        {
+            WsdlOperationInfo info = WsdlOperationInfo.fromURL(wsdlUrl);
+            return info.getOperationsHashtable();
         }
 
     }

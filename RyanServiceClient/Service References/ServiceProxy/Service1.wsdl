@@ -13,16 +13,35 @@
   <wsdl:message name="IRyanService_getWsOperations_OutputMessage">
     <wsdl:part name="parameters" element="tns:getWsOperationsResponse" />
   </wsdl:message>
+  <wsdl:message name="IRyanService_WsHasjOpertions_InputMessage">
+    <wsdl:part name="parameters" element="tns:WsHasjOpertions" />
+  </wsdl:message>
+  <wsdl:message name="IRyanService_WsHasjOpertions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WsHasjOpertionsResponse" />
+  </wsdl:message>
   <wsdl:portType name="IRyanService">
     <wsdl:operation name="getWsOperations">
       <wsdl:input wsaw:Action="http://tempuri.org/IRyanService/getWsOperations" message="tns:IRyanService_getWsOperations_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IRyanService/getWsOperationsResponse" message="tns:IRyanService_getWsOperations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WsHasjOpertions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRyanService/WsHasjOpertions" message="tns:IRyanService_WsHasjOpertions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRyanService/WsHasjOpertionsResponse" message="tns:IRyanService_WsHasjOpertions_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IRyanService" type="tns:IRyanService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="getWsOperations">
       <soap:operation soapAction="http://tempuri.org/IRyanService/getWsOperations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WsHasjOpertions">
+      <soap:operation soapAction="http://tempuri.org/IRyanService/WsHasjOpertions" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

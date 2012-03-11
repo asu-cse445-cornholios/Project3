@@ -68,6 +68,7 @@
     </Compile>
     <Compile Include="IRyanService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WsdlOperationInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

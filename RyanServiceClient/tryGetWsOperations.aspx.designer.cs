@@ -22,30 +22,30 @@ namespace WebClient {
         protected global::System.Web.UI.HtmlControls.HtmlForm frmMain;
         
         /// <summary>
-        /// TextBox1 control.
+        /// txtUrl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox txtUrl;
         
         /// <summary>
-        /// Button1 control.
+        /// btnInvoke control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button btnInvoke;
         
         /// <summary>
-        /// TextBox2 control.
+        /// txtResponse control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox txtResponse;
     }
 }

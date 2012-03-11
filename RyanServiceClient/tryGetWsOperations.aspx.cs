@@ -14,16 +14,16 @@ namespace WebClient
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+
+        protected void btnInvoke_Click(object sender, EventArgs e)
         {
             ServiceProxy.RyanServiceClient client = new ServiceProxy.RyanServiceClient();
-
-            string[] response = client.getWsOperations(TextBox1.Text);
-            
-            TextBox2.Text = "";
-            foreach (string s in response)
+            txtResponse.Text = "";
+            string url = txtUrl.Text;
+            string[] response = client.getWsOperations(url);
+            foreach (string line in response)
             {
-                TextBox2.Text += s + "\n";
+                txtResponse.Text += line + "\n";
             }
         }
     }

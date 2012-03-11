@@ -15,4 +15,18 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="WsHasjOpertions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="wsdlUrl" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WsHasjOpertionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="WsHasjOpertionsResult" nillable="true" type="q2:ArrayOfKeyValueOfanyTypeanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>
