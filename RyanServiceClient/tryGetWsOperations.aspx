@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="tryGetWsOperations.aspx.cs" Inherits="WebClient._default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TryGetWsOperations.aspx.cs" Inherits="WebClient.TryGetWsOperations" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -7,23 +7,18 @@
     <title></title>
 </head>
 <body>
-<div style="background-color: #6699FF; font-size: x-large; height: 47px;">Get WS 
-    operations service</div>
-    <form id="frmMain" runat="server">
+    <form id="form1" runat="server">
     <div>
     
-        <br />
-    
-        <asp:TextBox ID="txtUrl" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtInput" runat="server"></asp:TextBox>
         <asp:Button ID="btnInvoke" runat="server" onclick="btnInvoke_Click" 
             Text="Invoke" />
-        <br />
-        <br />
-        <asp:TextBox ID="txtResponse" runat="server" Height="99px" Rows="4" 
-            TextMode="MultiLine" Width="267px"></asp:TextBox>
-        <br />
     
     </div>
+    <p>
+        <asp:TextBox ID="txtResponse" runat="server" Height="102px" ReadOnly="True" 
+            TextMode="MultiLine" Width="217px"></asp:TextBox>
+    </p>
     </form>
 </body>
 </html>

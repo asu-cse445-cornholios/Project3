@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://localhost:1840/RyanService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://webstrar6.fulton.asu.edu/page1/RyanService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <xs:element name="getWsOperations">
     <xs:complexType>
       <xs:sequence>
@@ -15,17 +15,17 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="WsHasjOpertions">
+  <xs:element name="WsHashOperations">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="wsdlUrl" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="WsHasjOpertionsResponse">
+  <xs:element name="WsHashOperationsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="WsHasjOpertionsResult" nillable="true" type="q2:ArrayOfKeyValueOfanyTypeanyType" />
+        <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="WsHashOperationsResult" nillable="true" type="q2:ArrayOfKeyValueOfanyTypeanyType" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

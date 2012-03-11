@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="13f31c38-50ab-4468-86a9-efc1775e808b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ccd132d3-e0ce-42e9-aa63-d544574ea759" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <EnableDataBinding>true</EnableDataBinding>
@@ -18,14 +18,13 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:1840/RyanService.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://webstrar6.fulton.asu.edu/page1/RyanService.svc?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="RyanService.disco" MetadataType="Disco" ID="db912555-a388-4779-bea2-ca9d3e7f4f20" SourceId="1" SourceUrl="http://localhost:1840/RyanService.svc?disco" />
-    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="c789d8df-f581-42b5-8016-a65cf4e6be09" SourceId="1" SourceUrl="http://localhost:1840/RyanService.svc?wsdl" />
-    <MetadataFile FileName="RyanService.xsd" MetadataType="Schema" ID="c0d00f02-d0fe-4c0e-b4f7-a4dac7224983" SourceId="1" SourceUrl="http://localhost:1840/RyanService.svc?xsd=xsd2" />
-    <MetadataFile FileName="RyanService1.xsd" MetadataType="Schema" ID="9eda3560-668e-4ed0-a3d2-2442da49ac76" SourceId="1" SourceUrl="http://localhost:1840/RyanService.svc?xsd=xsd1" />
-    <MetadataFile FileName="RyanService2.xsd" MetadataType="Schema" ID="c22a4d5a-4f6d-4117-9a57-5eb14b75118f" SourceId="1" SourceUrl="http://localhost:1840/RyanService.svc?xsd=xsd0" />
+    <MetadataFile FileName="RyanService.xsd" MetadataType="Schema" ID="33068e84-48c4-4e4a-aaed-6acd39178cf6" SourceId="1" SourceUrl="http://webstrar6.fulton.asu.edu/page1/RyanService.svc?xsd=xsd1" />
+    <MetadataFile FileName="RyanService1.xsd" MetadataType="Schema" ID="62562c10-7aad-43fb-8aac-23fa35585ea4" SourceId="1" SourceUrl="http://webstrar6.fulton.asu.edu/page1/RyanService.svc?xsd=xsd2" />
+    <MetadataFile FileName="RyanService2.xsd" MetadataType="Schema" ID="c6cf8687-35ec-4a30-848b-29befd96b9eb" SourceId="1" SourceUrl="http://webstrar6.fulton.asu.edu/page1/RyanService.svc?xsd=xsd0" />
+    <MetadataFile FileName="RyanService.wsdl" MetadataType="Wsdl" ID="f6e0ce1d-a402-44eb-98a0-0f5deecbc1d7" SourceId="1" SourceUrl="http://webstrar6.fulton.asu.edu/page1/RyanService.svc?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

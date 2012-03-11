@@ -18,8 +18,8 @@ namespace WebClient.ServiceProxy {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRyanService/getWsOperations", ReplyAction="http://tempuri.org/IRyanService/getWsOperationsResponse")]
         string[] getWsOperations(string url);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRyanService/WsHasjOpertions", ReplyAction="http://tempuri.org/IRyanService/WsHasjOpertionsResponse")]
-        System.Collections.Generic.Dictionary<object, object> WsHasjOpertions(string wsdlUrl);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRyanService/WsHashOperations", ReplyAction="http://tempuri.org/IRyanService/WsHashOperationsResponse")]
+        System.Collections.Generic.Dictionary<object, object> WsHashOperations(string wsdlUrl);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -53,8 +53,8 @@ namespace WebClient.ServiceProxy {
             return base.Channel.getWsOperations(url);
         }
         
-        public System.Collections.Generic.Dictionary<object, object> WsHasjOpertions(string wsdlUrl) {
-            return base.Channel.WsHasjOpertions(wsdlUrl);
+        public System.Collections.Generic.Dictionary<object, object> WsHashOperations(string wsdlUrl) {
+            return base.Channel.WsHashOperations(wsdlUrl);
         }
     }
 }
