@@ -1,1 +1,1 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="Top10Words.Top10Words" CodeBehind="reqdServices.svc.cs" %>
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Top10Words.ReqdServices" CodeBehind="reqdServices.svc.cs" %>

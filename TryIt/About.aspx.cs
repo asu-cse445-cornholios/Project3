@@ -13,5 +13,12 @@ namespace TryIt
         {
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            var svcClient = new Top10.ReqdServicesClient();
+            txtOutput.Text = svcClient.wordFilter(txtInputString.Text);
+
+        }
     }
 }

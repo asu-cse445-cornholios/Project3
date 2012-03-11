@@ -16,7 +16,7 @@ namespace TryIt
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            var top10client = new Top10.Top10WordsClient();
+            var top10client = new Top10.ReqdServicesClient();
 
             top10client.top10Words(txtURL.Text);
         }

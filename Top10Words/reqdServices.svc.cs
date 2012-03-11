@@ -11,7 +11,7 @@ using System.Text.RegularExpressions;
 namespace Top10Words
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in code, svc and config file together.
-    public class Top10Words : ITop10Words
+    public class ReqdServices : IReqdServices
     {
         public string[] top10Words(string url)
         {
@@ -36,29 +36,32 @@ namespace Top10Words
                 
             }
 
-            var top10 =
+            var sortedWords =
                 from word in wordCount
                 orderby word.Value descending
-                select word;
+                select word.Key;
 
-            var a = top10.Take(10);
-            
-            
-            return new string[] {"a","b"};
+            return sortedWords.Take(10).ToArray<string>();
+                       
         }
 
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
+        public string wordFilter(string text)
         {
-            if (composite == null)
-            {
-                throw new ArgumentNullException("composite");
-            }
-            if (composite.BoolValue)
-            {
-                composite.StringValue += "Suffix";
-            }
-            return composite;
+            string[] stopWords = { "a", "an", "in", "on", "the", "is", "are", "am" };
+            text = stripTags(text);
+
+            const string PatternTemplate = @"\b({0})(s?)\b";
+            const RegexOptions Options = RegexOptions.IgnoreCase;
+
+            IEnumerable<Regex> stopWordMatchers = stopWords.
+                Select(x => new Regex(string.Format(PatternTemplate, x), Options));
+
+            string output = stopWordMatchers.
+               Aggregate(text, (current, matcher) => matcher.Replace(current, ""));
+
+            return output;
         }
+
 
         private static string stripTags(string source)
         {

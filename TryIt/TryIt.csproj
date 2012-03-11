@@ -78,11 +78,12 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <None Include="Service References\Top10\reqdServices3.xsd">
+    <None Include="Service References\Top10\ReqdServices.wsdl" />
+    <None Include="Service References\Top10\reqdServices1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\Top10\TryIt.Top10.CompositeType.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Service References\Top10\reqdServices2.xsd">
+      <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -162,13 +163,6 @@
     <None Include="Service References\Top10\reqdServices.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\Top10\reqdServices1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\Top10\reqdServices2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\Top10\Top10Words.wsdl" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

@@ -78,7 +78,7 @@
     <Compile Include="reqdServices.svc.cs">
       <DependentUpon>reqdServices.svc</DependentUpon>
     </Compile>
-    <Compile Include="ITop10Words.cs" />
+    <Compile Include="IReqdServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
