@@ -90,7 +90,6 @@ namespace MusicInfo
                 requestUrl += "artist:" + search.Artist + " ";
             }
 
-            System.Console.WriteLine(requestUrl);
 
             //
             // Get and Parse result
@@ -124,12 +123,122 @@ namespace MusicInfo
 
         public static ReleaseGroupResult[] findReleaseGroups(ReleaseGroupSearch search)
         {
-            return null;
+            List<ReleaseGroupResult> releaseGroups = new List<ReleaseGroupResult>();
+
+            //
+            // Build request Url
+            //
+            string requestUrl = serviceUrl + "/release-group/?query=";
+
+            if (search.Artist != "")
+            {
+                requestUrl += "artist:" + search.Artist + " ";
+            }
+            if (search.Release != "")
+            {
+                requestUrl += "release:" + search.Release + " ";
+            }
+            if (search.ReleaseGroup != "")
+            {
+                requestUrl += "releasegroup:" + search.ReleaseGroup + " ";
+            }
+            if (search.ReleaseID != "")
+            {
+                requestUrl += "reid:" + search.ReleaseID + " ";
+            }
+            if (search.Type != "")
+            {
+                requestUrl += "type:" + search.Type + " ";
+            }
+
+            //
+            // Get and Parse result
+            //
+            XmlDocument docRef = new XmlDocument();
+            docRef.Load(requestUrl);
+            XmlNode root = docRef.DocumentElement;
+            XmlNode releaseGroupList = root.FirstChild;
+
+            XmlNodeList releaseGroupNodes = releaseGroupList.ChildNodes;
+            foreach (XmlNode releaseGroupNode in releaseGroupNodes)
+            {
+                ReleaseGroupResult newReleaseGroup = new ReleaseGroupResult();
+
+                newReleaseGroup.Score = getAttributeValue(releaseGroupNode, "ext:score");
+                newReleaseGroup.Id = getAttributeValue(releaseGroupNode, "id");
+                newReleaseGroup.Type = getTextChild(getNodeByName(releaseGroupNode, "type"));
+                newReleaseGroup.Title = getTextChild(getNodeByName(releaseGroupNode, "title"));
+
+                releaseGroups.Add(newReleaseGroup);
+            }
+
+
+
+            return releaseGroups.ToArray();
         }
 
         public static ReleaseResult[] findReleases(ReleaseSearch search)
         {
-            return null;
+            List<ReleaseResult> releases = new List<ReleaseResult>();
+
+            //
+            // Build request Url
+            //
+            string requestUrl = serviceUrl + "/release/?query=";
+
+            if (search.AmazonID != "")
+            {
+                requestUrl += "asin:" + search.AmazonID + " ";
+            }
+            if (search.ArtistID != "")
+            {
+                requestUrl += "arid:" + search.ArtistID + " ";
+            }
+            if (search.ArtistName != "")
+            {
+                requestUrl += "artistname:" + search.ArtistName + " ";
+            }
+            if (search.Label != "")
+            {
+                requestUrl += "label:" + search.Label + " ";
+            }
+            if (search.ReleaseGroupID != "")
+            {
+                requestUrl += "rgid:" + search.ReleaseGroupID + " ";
+            }
+            if (search.ReleaseID != "")
+            {
+                requestUrl += "reid:" + search.ReleaseID + " ";
+            }
+            if (search.ReleaseName != "")
+            {
+                requestUrl += "release:" + search.ReleaseName + " ";
+            }
+
+
+
+            //
+            // Get and Parse result
+            //
+            XmlDocument docRef = new XmlDocument();
+            docRef.Load(requestUrl);
+            XmlNode root = docRef.DocumentElement;
+            XmlNode releaseList = root.FirstChild;
+
+            XmlNodeList releaseNodes = releaseList.ChildNodes;
+            foreach (XmlNode releaseNode in releaseNodes)
+            {
+                ReleaseResult newRelease = new ReleaseResult();
+
+                newRelease.Score = getAttributeValue(releaseNode, "ext:score");
+                newRelease.Id = getAttributeValue(releaseNode, "id");
+                newRelease.Title = getTextChild(getNodeByName(releaseNode, "title"));
+
+                releases.Add(newRelease);
+            }
+
+
+            return releases.ToArray();
         }
 
         public static RecordingResult[] findRecordings(RecordingSearch search)
