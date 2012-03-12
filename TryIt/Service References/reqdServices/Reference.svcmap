@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="19ca2e50-2400-4266-b8cd-7f231bab9bd9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f1f075c7-e68f-49c4-be67-b820b5c54483" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <EnableDataBinding>true</EnableDataBinding>
@@ -18,14 +18,15 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:4157/reqdServices.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://webstrar6.fulton.asu.edu/page5/reqdServices.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="reqdServices.xsd" MetadataType="Schema" ID="dc7e3843-c2ab-46c8-9b99-5401334443ca" SourceId="1" SourceUrl="http://localhost:4157/reqdServices.svc?xsd=xsd1" />
-    <MetadataFile FileName="reqdServices1.xsd" MetadataType="Schema" ID="cabcdd72-588d-4433-a5ba-843149a2feab" SourceId="1" SourceUrl="http://localhost:4157/reqdServices.svc?xsd=xsd0" />
-    <MetadataFile FileName="ReqdServices.wsdl" MetadataType="Wsdl" ID="8a21a6d7-d983-47ad-8a29-322ccabcdb63" SourceId="1" SourceUrl="http://localhost:4157/reqdServices.svc?wsdl" />
-    <MetadataFile FileName="reqdServices2.xsd" MetadataType="Schema" ID="11cf5b71-f7cd-4569-aeb7-fc0cc07f0d24" SourceId="1" SourceUrl="http://localhost:4157/reqdServices.svc?xsd=xsd2" />
-    <MetadataFile FileName="reqdServices.disco" MetadataType="Disco" ID="37923fb2-8559-4ab4-8c78-9277abb2f639" SourceId="1" SourceUrl="http://localhost:4157/reqdServices.svc?disco" />
+    <MetadataFile FileName="reqdServices4.xsd" MetadataType="Schema" ID="f1447de5-aa1e-4fc0-801d-8df7f0424336" SourceId="1" SourceUrl="http://webstrar6.fulton.asu.edu/page5/reqdServices.svc?xsd=xsd2" />
+    <MetadataFile FileName="reqdServices1.disco" MetadataType="Disco" ID="4ebd1d66-afca-480f-8cb7-24b2c3fe420d" SourceId="1" SourceUrl="http://webstrar6.fulton.asu.edu/page5/reqdServices.svc?disco" />
+    <MetadataFile FileName="ReqdServices1.wsdl" MetadataType="Wsdl" ID="b3d82977-f54e-4164-8953-189ffffb4183" SourceId="1" SourceUrl="http://webstrar6.fulton.asu.edu/page5/reqdServices.svc?wsdl" />
+    <MetadataFile FileName="reqdServices41.xsd" MetadataType="Schema" ID="f99e4cc5-e65d-496d-8d0a-fde9280f86d5" SourceId="1" SourceUrl="http://webstrar6.fulton.asu.edu/page5/reqdServices.svc?xsd=xsd0" />
+    <MetadataFile FileName="reqdServices42.xsd" MetadataType="Schema" ID="06b80715-c88d-48b6-8600-468abb38b64e" SourceId="1" SourceUrl="http://webstrar6.fulton.asu.edu/page5/reqdServices.svc?xsd=xsd1" />
+    <MetadataFile FileName="reqdServices43.xsd" MetadataType="Schema" ID="ed7f1afd-39d8-4652-9581-87aab9cfd3dc" SourceId="1" SourceUrl="http://webstrar6.fulton.asu.edu/page5/reqdServices.svc?xsd=xsd3" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

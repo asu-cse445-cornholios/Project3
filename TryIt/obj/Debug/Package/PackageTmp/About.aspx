@@ -10,7 +10,7 @@
         <asp:Label ID="Label1" runat="server" Text="Enter  a string to filter"></asp:Label>
 &nbsp;(please note: the webToString service that the service relies on has a limit of 
         8092 characters to work)</p>
-    <p>
+<p>
 &nbsp;&nbsp;&nbsp;
         <asp:TextBox ID="txtInputString" runat="server" Width="354px"></asp:TextBox>
 &nbsp;&nbsp;&nbsp;&nbsp;

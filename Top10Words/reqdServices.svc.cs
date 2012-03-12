@@ -8,6 +8,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Top10Words.BingSearch;
 using Top10Words.DictionarySvc;
+using System.Security.Cryptography;
 
 
 namespace Top10Words
@@ -110,6 +111,22 @@ namespace Top10Words
             return definitions.ToArray();
         }
 
+        public RMAticket submitRMA(string customerID, string orderID)
+        {
+            var RMA = new RMAticket();
+
+            /*
+            byte[] hashInput = Encoding.UTF8.GetBytes(customerID + orderID);
+                        
+            RMA.RMANumber =  Encoding.UTF8.GetString(new MD5CryptoServiceProvider().ComputeHash(hashInput));
+             * 
+             */
+            RMA.RMANumber = hash(customerID + orderID).ToString();
+            RMA.ExpirationDate = new DateTime(DateTime.Today.Year, DateTime.Today.Month + 3, DateTime.Today.Day);
+
+            return RMA;
+        }
+
         private static string stripTags(string source)
         {
             char[] array = new char[source.Length];
@@ -136,6 +153,24 @@ namespace Top10Words
                 }
             }
             return new string(array, 0, arrayIndex);
+        }
+
+        private int hash(string s)
+        {
+            uint hash = 0;
+
+            foreach (byte b in System.Text.Encoding.Unicode.GetBytes(s))
+            {   
+                hash += b;
+                hash += (hash << 10);
+                hash ^= (hash >> 6);    
+            }
+
+            hash += (hash << 3);
+            hash ^= (hash >> 11);
+            hash += (hash << 15);
+
+            return (int)(hash % 999999999);
         }
     }
 }

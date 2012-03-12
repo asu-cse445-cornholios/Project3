@@ -14,40 +14,49 @@ namespace Top10Words
     public interface IReqdServices
     {
 
+        //Required Services
         [OperationContract]
         string[] top10Words(string url);
 
         [OperationContract]
         string wordFilter(string text);
 
+
+        //Elective Services
+
+        //NewFocus is from required services list and is not related to the application
         [OperationContract]
         string[] newsFocus(string[] topics);
 
         [OperationContract]
         string[] getDefinition(string word);
-        // TODO: Add your service operations here
+
+        [OperationContract]
+        RMAticket submitRMA(string customerID, string orderID);
+        
+
     }
 
 
     // Use a data contract as illustrated in the sample below to add composite types to service operations.
     [DataContract]
-    public class CompositeType
+    public class RMAticket
     {
-        bool boolValue = true;
-        string stringValue = "Hello ";
+        string rmaNumber = "";
+        DateTime expirationDate = DateTime.Today;
 
         [DataMember]
-        public bool BoolValue
+        public string RMANumber
         {
-            get { return boolValue; }
-            set { boolValue = value; }
+            get { return rmaNumber; }
+            set { rmaNumber = value; }
         }
 
         [DataMember]
-        public string StringValue
+        public DateTime ExpirationDate
         {
-            get { return stringValue; }
-            set { stringValue = value; }
+            get { return expirationDate; }
+            set { expirationDate = value; }
         }
     }
 }

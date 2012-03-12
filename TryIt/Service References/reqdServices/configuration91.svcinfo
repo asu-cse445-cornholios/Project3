@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="PlUHECMTshuCQVDAaAf5bAUzjGA=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="Y1vGNidq5I9c6pWG/z5FwbCcU+w=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_IReqdServices">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_IReqdServices" contract="reqdServices.IReqdServices" bindingType="basicHttpBinding" address="http://localhost:4157/reqdServices.svc" bindingConfiguration="BasicHttpBinding_IReqdServices">
+    <endpoint name="BasicHttpBinding_IReqdServices" contract="reqdServices.IReqdServices" bindingType="basicHttpBinding" address="http://webstrar6.fulton.asu.edu/page5/reqdServices.svc" bindingConfiguration="BasicHttpBinding_IReqdServices">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:4157/reqdServices.svc</serializedValue>
+          <serializedValue>http://webstrar6.fulton.asu.edu/page5/reqdServices.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

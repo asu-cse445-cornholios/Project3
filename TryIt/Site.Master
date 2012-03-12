@@ -32,7 +32,7 @@
                             Value="News Focus"></asp:MenuItem>
                         <asp:MenuItem NavigateUrl="~/definition.aspx" Text="Word Definition" 
                             Value="Word Definition"></asp:MenuItem>
-                        <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                        <asp:MenuItem Text="RMA Submit" Value="RMA Submit" NavigateUrl="~/RMA.aspx"></asp:MenuItem>
                         <asp:MenuItem NavigateUrl="http://webstrar6.fulton.asu.edu/page5/reqdServices.svc" Text="Svc File" 
                             Value="Svc File"></asp:MenuItem>
                     </Items>
