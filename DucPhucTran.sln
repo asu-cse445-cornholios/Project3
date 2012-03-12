@@ -19,6 +19,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Top10ContentWordsWebApplica
 		{C486E0EE-FC75-462F-A966-7AABF37C51EB} = {C486E0EE-FC75-462F-A966-7AABF37C51EB}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingCartServiceWebApplication", "ShoppingCartServiceWebApplication\ShoppingCartServiceWebApplication.csproj", "{0DDDEED1-EDDF-47D6-A4E5-83A427024A46}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F31C7C24-9AE9-4E3C-9CD5-BA99F09849C2} = {F31C7C24-9AE9-4E3C-9CD5-BA99F09849C2}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +34,16 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0DDDEED1-EDDF-47D6-A4E5-83A427024A46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DDDEED1-EDDF-47D6-A4E5-83A427024A46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DDDEED1-EDDF-47D6-A4E5-83A427024A46}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{0DDDEED1-EDDF-47D6-A4E5-83A427024A46}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{0DDDEED1-EDDF-47D6-A4E5-83A427024A46}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0DDDEED1-EDDF-47D6-A4E5-83A427024A46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DDDEED1-EDDF-47D6-A4E5-83A427024A46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DDDEED1-EDDF-47D6-A4E5-83A427024A46}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0DDDEED1-EDDF-47D6-A4E5-83A427024A46}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{0DDDEED1-EDDF-47D6-A4E5-83A427024A46}.Release|x86.ActiveCfg = Release|Any CPU
 		{15B3E0D2-6217-493A-A690-158C497F5318}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{15B3E0D2-6217-493A-A690-158C497F5318}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15B3E0D2-6217-493A-A690-158C497F5318}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU

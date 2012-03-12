@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ShoppingCartServiceLibrary" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ShoppingCartServiceLibrary" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ShoppingCart">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CartItems" nillable="true" type="tns:ArrayOfCartItem" />
+      <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Modified" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ShoppingCartId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ShoppingCart" nillable="true" type="tns:ShoppingCart" />
+  <xs:complexType name="ArrayOfCartItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CartItem" nillable="true" type="tns:CartItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCartItem" nillable="true" type="tns:ArrayOfCartItem" />
+  <xs:complexType name="CartItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CartItemId" type="xs:int" />
+      <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Item" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Modified" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Price" type="xs:double" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:int" />
+      <xs:element minOccurs="0" name="ShoppingCart" nillable="true" type="tns:ShoppingCart" />
+      <xs:element minOccurs="0" name="ShoppingCartId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CartItem" nillable="true" type="tns:CartItem" />
+</xs:schema>

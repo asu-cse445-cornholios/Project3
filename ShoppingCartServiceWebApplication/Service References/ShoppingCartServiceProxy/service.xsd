@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/ShoppingCartServiceLibrary" />
+  <xs:element name="AddItemToCart">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="shoppingCartId" type="xs:int" />
+        <xs:element minOccurs="0" name="item" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="quantity" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddItemToCartResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddItemToCartResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ClearCart">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="shoppingCartId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ClearCartResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ClearCartResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateCart">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateCartResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateCartResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCart">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="shoppingCartId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCartResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ShoppingCartServiceLibrary" minOccurs="0" name="GetCartResult" nillable="true" type="q1:ShoppingCart" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyItemInCart">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="shoppingCartId" type="xs:int" />
+        <xs:element minOccurs="0" name="cartItemId" type="xs:int" />
+        <xs:element minOccurs="0" name="quantity" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyItemInCartResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ModifyItemInCartResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteItemFromCart">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="shoppingCartId" type="xs:int" />
+        <xs:element minOccurs="0" name="cartItemId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteItemFromCartResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteItemFromCartResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveCart">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="shoppingCartId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveCartResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RemoveCartResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

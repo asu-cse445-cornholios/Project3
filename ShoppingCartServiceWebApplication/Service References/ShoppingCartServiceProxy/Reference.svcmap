@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ee896184-57a2-4a3e-80fb-90c22d1e9ead" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/ShoppingCartServiceLibrary/ShoppingCartService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="e3a98ed1-f083-4136-8962-997a232b1ec3" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ShoppingCartServiceLibrary/ShoppingCartService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="52f9f39f-5869-4b2a-821b-2352b8ccb7c2" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ShoppingCartServiceLibrary/ShoppingCartService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="7634286b-876f-4479-9b87-19c8cd8e3634" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ShoppingCartServiceLibrary/ShoppingCartService/mex" />
+    <MetadataFile FileName="ShoppingCartServiceLibrary.xsd" MetadataType="Schema" ID="d35f637a-bc4e-4bec-a8f3-18a43e0535d3" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ShoppingCartServiceLibrary/ShoppingCartService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
