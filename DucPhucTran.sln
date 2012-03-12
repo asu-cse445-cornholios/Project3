@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StemmingServiceLibrary", "S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Top10ContentWordsServiceLibrary", "Top10ContentWordsServiceLibrary\Top10ContentWordsServiceLibrary.csproj", "{C486E0EE-FC75-462F-A966-7AABF37C51EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amazon.PAAPI.WCF", "Amazon.PAAPI.WCF\Amazon.PAAPI.WCF.csproj", "{D38B4A40-D315-4158-9BD1-34C1697668BB}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StemmingServiceWebApplication", "StemmingServiceWebApplication\StemmingServiceWebApplication.csproj", "{383EB593-17F0-4257-B877-E3F335B6289B}"
 	ProjectSection(ProjectDependencies) = postProject
 		{15B3E0D2-6217-493A-A690-158C497F5318} = {15B3E0D2-6217-493A-A690-158C497F5318}
@@ -71,16 +69,6 @@ Global
 		{C486E0EE-FC75-462F-A966-7AABF37C51EB}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{C486E0EE-FC75-462F-A966-7AABF37C51EB}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{C486E0EE-FC75-462F-A966-7AABF37C51EB}.Release|x86.ActiveCfg = Release|Any CPU
-		{D38B4A40-D315-4158-9BD1-34C1697668BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D38B4A40-D315-4158-9BD1-34C1697668BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D38B4A40-D315-4158-9BD1-34C1697668BB}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{D38B4A40-D315-4158-9BD1-34C1697668BB}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{D38B4A40-D315-4158-9BD1-34C1697668BB}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{D38B4A40-D315-4158-9BD1-34C1697668BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D38B4A40-D315-4158-9BD1-34C1697668BB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D38B4A40-D315-4158-9BD1-34C1697668BB}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{D38B4A40-D315-4158-9BD1-34C1697668BB}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{D38B4A40-D315-4158-9BD1-34C1697668BB}.Release|x86.ActiveCfg = Release|Any CPU
 		{EC6E1C98-3DDF-4DA7-8091-51CCCF2F1A03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EC6E1C98-3DDF-4DA7-8091-51CCCF2F1A03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC6E1C98-3DDF-4DA7-8091-51CCCF2F1A03}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU

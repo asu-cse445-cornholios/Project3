@@ -11,14 +11,16 @@ namespace ShoppingCartServiceLibrary
     public interface IShoppingCartService
     {
         [OperationContract]
-        void CartAdd();
+        void AddItemToCart(int cartId, string item, int quantity);
         [OperationContract]
-        void CartClear();
+        void ClearCart(int cartId);
         [OperationContract]
-        void CartCreate();
+        int CreateCart();
         [OperationContract]
-        void CartGet();
+        ShoppingCart GetCart(string cartId);
         [OperationContract]
-        void CartModify();
+        void ModifyItemInCart(int cartId, int cartItemId, int quantity);
+        [OperationContract]
+        void DeleteItemFromCart(int cartId, int cartItemId);
     }
 }

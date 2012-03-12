@@ -9,27 +9,32 @@ namespace ShoppingCartServiceLibrary
 {
     public class ShoppingCartService : IShoppingCartService
     {
-        public void CartAdd()
+        public void AddItemToCart(int cartId, string item, int quantity)
         {
             throw new NotImplementedException();
         }
 
-        public void CartClear()
+        public void ClearCart(int cartId)
         {
             throw new NotImplementedException();
         }
 
-        public void CartCreate()
+        public int CreateCart()
         {
             throw new NotImplementedException();
         }
 
-        public void CartGet()
+        public ShoppingCart GetCart(string cartId)
         {
             throw new NotImplementedException();
         }
 
-        public void CartModify()
+        public void ModifyItemInCart(int cartId, int cartItemId, int quantity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DeleteItemFromCart(int cartId, int cartItemId)
         {
             throw new NotImplementedException();
         }
