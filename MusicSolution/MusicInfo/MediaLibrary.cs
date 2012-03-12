@@ -85,7 +85,7 @@ namespace MusicInfo
             //
             string requestUrl = serviceUrl + "/artist/?query=";
 
-            if (search.Artist != "")
+            if (search.Artist != null)
             {
                 requestUrl += "artist:" + search.Artist + " ";
             }
@@ -130,23 +130,23 @@ namespace MusicInfo
             //
             string requestUrl = serviceUrl + "/release-group/?query=";
 
-            if (search.Artist != "")
+            if (search.Artist != null)
             {
                 requestUrl += "artist:" + search.Artist + " ";
             }
-            if (search.Release != "")
+            if (search.Release != null)
             {
                 requestUrl += "release:" + search.Release + " ";
             }
-            if (search.ReleaseGroup != "")
+            if (search.ReleaseGroup != null)
             {
                 requestUrl += "releasegroup:" + search.ReleaseGroup + " ";
             }
-            if (search.ReleaseID != "")
+            if (search.ReleaseID != null)
             {
                 requestUrl += "reid:" + search.ReleaseID + " ";
             }
-            if (search.Type != "")
+            if (search.Type != null)
             {
                 requestUrl += "type:" + search.Type + " ";
             }
@@ -186,31 +186,31 @@ namespace MusicInfo
             //
             string requestUrl = serviceUrl + "/release/?query=";
 
-            if (search.AmazonID != "")
+            if (search.AmazonID != null)
             {
                 requestUrl += "asin:" + search.AmazonID + " ";
             }
-            if (search.ArtistID != "")
+            if (search.ArtistID != null)
             {
                 requestUrl += "arid:" + search.ArtistID + " ";
             }
-            if (search.ArtistName != "")
+            if (search.ArtistName != null)
             {
                 requestUrl += "artistname:" + search.ArtistName + " ";
             }
-            if (search.Label != "")
+            if (search.Label != null)
             {
                 requestUrl += "label:" + search.Label + " ";
             }
-            if (search.ReleaseGroupID != "")
+            if (search.ReleaseGroupID != null)
             {
                 requestUrl += "rgid:" + search.ReleaseGroupID + " ";
             }
-            if (search.ReleaseID != "")
+            if (search.ReleaseID != null)
             {
                 requestUrl += "reid:" + search.ReleaseID + " ";
             }
-            if (search.ReleaseName != "")
+            if (search.ReleaseName != null)
             {
                 requestUrl += "release:" + search.ReleaseName + " ";
             }
@@ -250,27 +250,27 @@ namespace MusicInfo
             //
             string requestUrl = serviceUrl + "/recording/?query=";
 
-            if (search.Artist != "")
+            if (search.Artist != null)
             {
                 requestUrl += "artist:" + search.Artist + " ";
             }
-            if (search.Id != "")
+            if (search.Id != null)
             {
                 requestUrl += "rid:" + search.Id + " ";
             }
-            if (search.Recording != "")
+            if (search.Recording != null)
             {
                 requestUrl += "recording:" + search.Recording + " ";
             }
-            if (search.Release != "")
+            if (search.Release != null)
             {
                 requestUrl += "release:" + search.Release + " ";
             }
-            if (search.Type != "")
+            if (search.Type != null)
             {
                 requestUrl += "type:" + search.Type + " ";
             }
-            if (search.ArtistId != "")
+            if (search.ArtistId != null)
             {
                 requestUrl += "aid:" + search.ArtistId + " ";
             }
@@ -309,15 +309,15 @@ namespace MusicInfo
             //
             string requestUrl = serviceUrl + "/label/?query=";
 
-            if (search.Name != "")
+            if (search.Name != null)
             {
                 requestUrl += "label:" + search.Name + " ";
             }
-            if (search.Alias != "")
+            if (search.Alias != null)
             {
                 requestUrl += "alias:" + search.Alias + " ";
             }
-            if (search.Type != "")
+            if (search.Type != null)
             {
                 requestUrl += "type:" + search.Type + " ";
             }
@@ -359,19 +359,19 @@ namespace MusicInfo
             //
             string requestUrl = serviceUrl + "/work/?query=";
 
-            if (search.Artist != "")
+            if (search.Artist != null)
             {
                 requestUrl += "artist:" + search.Artist + " ";
             }
-            if (search.Work != "")
+            if (search.Work != null)
             {
                 requestUrl += "work:" + search.Work + " ";
             }
-            if (search.WorkID != "")
+            if (search.WorkID != null)
             {
                 requestUrl += "wid:" + search.WorkID + " ";
             }
-            if (search.WorkType != "")
+            if (search.WorkType != null)
             {
                 requestUrl += "type:" + search.WorkType + " ";
             }

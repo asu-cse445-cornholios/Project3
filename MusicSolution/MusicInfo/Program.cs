@@ -12,12 +12,15 @@ namespace MusicInfo
         static void Main(string[] args)
         {
             //Test artist search
-            ArtistSearch search = new ArtistSearch();
-            search.Artist = "Scorpions";
-
-            ArtistResult[] result = MediaLibrary.findArtists(search);
+            ArtistSearch search1 = new ArtistSearch();
+            search1.Artist = "Scorpions";
+            ArtistResult[] result1 = MediaLibrary.findArtists(search1);
 
             // Test others
+            RecordingSearch search2 = new RecordingSearch();
+            search2.Recording = "Comeblack";
+            RecordingResult[] result2 = MediaLibrary.findRecordings(search2); 
+
             return;
         }
     }

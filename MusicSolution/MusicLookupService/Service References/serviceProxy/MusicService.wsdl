@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MusicService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://webstrar6.fulton.asu.edu/page3/MusicService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://webstrar6.fulton.asu.edu/page3/MusicService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://webstrar6.fulton.asu.edu/page3/MusicService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MusicInfo.SearchTypes" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMusicService_findArtists_InputMessage">
+    <wsdl:part name="parameters" element="tns:findArtists" />
+  </wsdl:message>
+  <wsdl:message name="IMusicService_findArtists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findArtistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMusicService_findReleaseGroups_InputMessage">
+    <wsdl:part name="parameters" element="tns:findReleaseGroups" />
+  </wsdl:message>
+  <wsdl:message name="IMusicService_findReleaseGroups_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findReleaseGroupsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMusicService_findReleases_InputMessage">
+    <wsdl:part name="parameters" element="tns:findReleases" />
+  </wsdl:message>
+  <wsdl:message name="IMusicService_findReleases_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findReleasesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMusicService_findRecordings_InputMessage">
+    <wsdl:part name="parameters" element="tns:findRecordings" />
+  </wsdl:message>
+  <wsdl:message name="IMusicService_findRecordings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findRecordingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMusicService_findLabels_InputMessage">
+    <wsdl:part name="parameters" element="tns:findLabels" />
+  </wsdl:message>
+  <wsdl:message name="IMusicService_findLabels_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findLabelsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMusicService_findWorks_InputMessage">
+    <wsdl:part name="parameters" element="tns:findWorks" />
+  </wsdl:message>
+  <wsdl:message name="IMusicService_findWorks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findWorksResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMusicService">
+    <wsdl:operation name="findArtists">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMusicService/findArtists" message="tns:IMusicService_findArtists_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMusicService/findArtistsResponse" message="tns:IMusicService_findArtists_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findReleaseGroups">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMusicService/findReleaseGroups" message="tns:IMusicService_findReleaseGroups_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMusicService/findReleaseGroupsResponse" message="tns:IMusicService_findReleaseGroups_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findReleases">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMusicService/findReleases" message="tns:IMusicService_findReleases_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMusicService/findReleasesResponse" message="tns:IMusicService_findReleases_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findRecordings">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMusicService/findRecordings" message="tns:IMusicService_findRecordings_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMusicService/findRecordingsResponse" message="tns:IMusicService_findRecordings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findLabels">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMusicService/findLabels" message="tns:IMusicService_findLabels_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMusicService/findLabelsResponse" message="tns:IMusicService_findLabels_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findWorks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMusicService/findWorks" message="tns:IMusicService_findWorks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMusicService/findWorksResponse" message="tns:IMusicService_findWorks_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IMusicService" type="tns:IMusicService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="findArtists">
+      <soap:operation soapAction="http://tempuri.org/IMusicService/findArtists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findReleaseGroups">
+      <soap:operation soapAction="http://tempuri.org/IMusicService/findReleaseGroups" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findReleases">
+      <soap:operation soapAction="http://tempuri.org/IMusicService/findReleases" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findRecordings">
+      <soap:operation soapAction="http://tempuri.org/IMusicService/findRecordings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findLabels">
+      <soap:operation soapAction="http://tempuri.org/IMusicService/findLabels" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findWorks">
+      <soap:operation soapAction="http://tempuri.org/IMusicService/findWorks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MusicService">
+    <wsdl:port name="BasicHttpBinding_IMusicService" binding="tns:BasicHttpBinding_IMusicService">
+      <soap:address location="http://webstrar6.fulton.asu.edu/page3/MusicService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

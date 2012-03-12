@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MusicInfo.SearchTypes" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MusicInfo.SearchTypes" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArtistSearch">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Artist" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArtistSearch" nillable="true" type="tns:ArtistSearch" />
+  <xs:complexType name="ArrayOfArtistResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ArtistResult" nillable="true" type="tns:ArtistResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfArtistResult" nillable="true" type="tns:ArrayOfArtistResult" />
+  <xs:complexType name="ArtistResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Begin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="End" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Score" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArtistResult" nillable="true" type="tns:ArtistResult" />
+  <xs:complexType name="ReleaseGroupSearch">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Artist" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Release" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReleaseGroup" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReleaseID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReleaseGroupSearch" nillable="true" type="tns:ReleaseGroupSearch" />
+  <xs:complexType name="ArrayOfReleaseGroupResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReleaseGroupResult" nillable="true" type="tns:ReleaseGroupResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfReleaseGroupResult" nillable="true" type="tns:ArrayOfReleaseGroupResult" />
+  <xs:complexType name="ReleaseGroupResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Score" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReleaseGroupResult" nillable="true" type="tns:ReleaseGroupResult" />
+  <xs:complexType name="ReleaseSearch">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AmazonID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ArtistID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ArtistName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Label" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReleaseGroupID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReleaseID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReleaseName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReleaseSearch" nillable="true" type="tns:ReleaseSearch" />
+  <xs:complexType name="ArrayOfReleaseResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReleaseResult" nillable="true" type="tns:ReleaseResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfReleaseResult" nillable="true" type="tns:ArrayOfReleaseResult" />
+  <xs:complexType name="ReleaseResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Score" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReleaseResult" nillable="true" type="tns:ReleaseResult" />
+  <xs:complexType name="RecordingSearch">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Artist" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ArtistId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Recording" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Release" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RecordingSearch" nillable="true" type="tns:RecordingSearch" />
+  <xs:complexType name="ArrayOfRecordingResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RecordingResult" nillable="true" type="tns:RecordingResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRecordingResult" nillable="true" type="tns:ArrayOfRecordingResult" />
+  <xs:complexType name="RecordingResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Length" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RecordingResult" nillable="true" type="tns:RecordingResult" />
+  <xs:complexType name="LabelSearch">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Alias" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LabelSearch" nillable="true" type="tns:LabelSearch" />
+  <xs:complexType name="ArrayOfLabelResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LabelResult" nillable="true" type="tns:LabelResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLabelResult" nillable="true" type="tns:ArrayOfLabelResult" />
+  <xs:complexType name="LabelResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Alias" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LabelResult" nillable="true" type="tns:LabelResult" />
+  <xs:complexType name="WorkSearch">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Artist" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Work" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WorkID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WorkType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WorkSearch" nillable="true" type="tns:WorkSearch" />
+  <xs:complexType name="ArrayOfWorkResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WorkResult" nillable="true" type="tns:WorkResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWorkResult" nillable="true" type="tns:ArrayOfWorkResult" />
+  <xs:complexType name="WorkResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Alias" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WorkResult" nillable="true" type="tns:WorkResult" />
+</xs:schema>

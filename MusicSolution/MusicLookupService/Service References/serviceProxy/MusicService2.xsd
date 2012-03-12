@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://webstrar6.fulton.asu.edu/page3/MusicService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MusicInfo.SearchTypes" />
+  <xs:element name="findArtists">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/MusicInfo.SearchTypes" minOccurs="0" name="search" nillable="true" type="q1:ArtistSearch" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findArtistsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/MusicInfo.SearchTypes" minOccurs="0" name="findArtistsResult" nillable="true" type="q2:ArrayOfArtistResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findReleaseGroups">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/MusicInfo.SearchTypes" minOccurs="0" name="search" nillable="true" type="q3:ReleaseGroupSearch" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findReleaseGroupsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/MusicInfo.SearchTypes" minOccurs="0" name="findReleaseGroupsResult" nillable="true" type="q4:ArrayOfReleaseGroupResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findReleases">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/MusicInfo.SearchTypes" minOccurs="0" name="search" nillable="true" type="q5:ReleaseSearch" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findReleasesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/MusicInfo.SearchTypes" minOccurs="0" name="findReleasesResult" nillable="true" type="q6:ArrayOfReleaseResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findRecordings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/MusicInfo.SearchTypes" minOccurs="0" name="search" nillable="true" type="q7:RecordingSearch" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findRecordingsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/MusicInfo.SearchTypes" minOccurs="0" name="findRecordingsResult" nillable="true" type="q8:ArrayOfRecordingResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findLabels">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/MusicInfo.SearchTypes" minOccurs="0" name="search" nillable="true" type="q9:LabelSearch" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findLabelsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/MusicInfo.SearchTypes" minOccurs="0" name="findLabelsResult" nillable="true" type="q10:ArrayOfLabelResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findWorks">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/MusicInfo.SearchTypes" minOccurs="0" name="search" nillable="true" type="q11:WorkSearch" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="findWorksResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/MusicInfo.SearchTypes" minOccurs="0" name="findWorksResult" nillable="true" type="q12:ArrayOfWorkResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

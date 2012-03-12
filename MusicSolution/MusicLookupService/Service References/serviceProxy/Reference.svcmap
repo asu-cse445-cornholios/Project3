@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5149b5e3-1cf5-4316-bd12-d214aa0c6f3f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://webstrar6.fulton.asu.edu/page3/MusicService.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MusicService.xsd" MetadataType="Schema" ID="7643739f-b60d-4289-93cd-a281058a85ed" SourceId="1" SourceUrl="http://webstrar6.fulton.asu.edu/page3/MusicService.svc?xsd=xsd1" />
+    <MetadataFile FileName="MusicService.wsdl" MetadataType="Wsdl" ID="e502dbc4-69b4-4901-8800-a17f7ba748d4" SourceId="1" SourceUrl="http://webstrar6.fulton.asu.edu/page3/MusicService.svc?wsdl" />
+    <MetadataFile FileName="MusicService1.xsd" MetadataType="Schema" ID="cac8d0df-d4da-4e6d-85b4-c4436e250ed4" SourceId="1" SourceUrl="http://webstrar6.fulton.asu.edu/page3/MusicService.svc?xsd=xsd2" />
+    <MetadataFile FileName="MusicService2.xsd" MetadataType="Schema" ID="0181fff0-425f-44f4-ba0e-4d3b59764576" SourceId="1" SourceUrl="http://webstrar6.fulton.asu.edu/page3/MusicService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
