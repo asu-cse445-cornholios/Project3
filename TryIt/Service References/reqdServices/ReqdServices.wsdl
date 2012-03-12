@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ReqdServices" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:4157/reqdServices.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:4157/reqdServices.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:4157/reqdServices.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IReqdServices_top10Words_InputMessage">
+    <wsdl:part name="parameters" element="tns:top10Words" />
+  </wsdl:message>
+  <wsdl:message name="IReqdServices_top10Words_OutputMessage">
+    <wsdl:part name="parameters" element="tns:top10WordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReqdServices_wordFilter_InputMessage">
+    <wsdl:part name="parameters" element="tns:wordFilter" />
+  </wsdl:message>
+  <wsdl:message name="IReqdServices_wordFilter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:wordFilterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReqdServices_newsFocus_InputMessage">
+    <wsdl:part name="parameters" element="tns:newsFocus" />
+  </wsdl:message>
+  <wsdl:message name="IReqdServices_newsFocus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:newsFocusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReqdServices_getDefinition_InputMessage">
+    <wsdl:part name="parameters" element="tns:getDefinition" />
+  </wsdl:message>
+  <wsdl:message name="IReqdServices_getDefinition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getDefinitionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IReqdServices">
+    <wsdl:operation name="top10Words">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReqdServices/top10Words" message="tns:IReqdServices_top10Words_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReqdServices/top10WordsResponse" message="tns:IReqdServices_top10Words_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="wordFilter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReqdServices/wordFilter" message="tns:IReqdServices_wordFilter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReqdServices/wordFilterResponse" message="tns:IReqdServices_wordFilter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="newsFocus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReqdServices/newsFocus" message="tns:IReqdServices_newsFocus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReqdServices/newsFocusResponse" message="tns:IReqdServices_newsFocus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getDefinition">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReqdServices/getDefinition" message="tns:IReqdServices_getDefinition_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReqdServices/getDefinitionResponse" message="tns:IReqdServices_getDefinition_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IReqdServices" type="tns:IReqdServices">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="top10Words">
+      <soap:operation soapAction="http://tempuri.org/IReqdServices/top10Words" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wordFilter">
+      <soap:operation soapAction="http://tempuri.org/IReqdServices/wordFilter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="newsFocus">
+      <soap:operation soapAction="http://tempuri.org/IReqdServices/newsFocus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDefinition">
+      <soap:operation soapAction="http://tempuri.org/IReqdServices/getDefinition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ReqdServices">
+    <wsdl:port name="BasicHttpBinding_IReqdServices" binding="tns:BasicHttpBinding_IReqdServices">
+      <soap:address location="http://localhost:4157/reqdServices.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

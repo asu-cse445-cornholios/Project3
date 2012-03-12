@@ -16,7 +16,7 @@ namespace TryIt
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            var svcClient = new Top10.ReqdServicesClient();
+            var svcClient = new reqdServices.ReqdServicesClient();
             txtOutput.Text = svcClient.wordFilter(txtInputString.Text);
 
         }

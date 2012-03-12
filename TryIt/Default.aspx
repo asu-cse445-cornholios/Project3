@@ -17,6 +17,7 @@
     <p>
         &nbsp;</p>
     <p>
-        <asp:TextBox ID="TextBox2" runat="server" Height="162px" Width="631px"></asp:TextBox>
+        <asp:TextBox ID="TextBox2" runat="server" Height="162px" Width="631px" 
+            TextMode="MultiLine" Wrap="False"></asp:TextBox>
     </p>
     </asp:Content>

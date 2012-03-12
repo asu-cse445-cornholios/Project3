@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Top10Words.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Top10Words_DictionarySvc_DictService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://services.aonaware.com/DictService/DictService.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

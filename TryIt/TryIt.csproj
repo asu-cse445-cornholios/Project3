@@ -58,10 +58,12 @@
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
-    <None Include="Service References\Top10\reqdServices.disco" />
-    <None Include="Service References\Top10\configuration91.svcinfo" />
-    <None Include="Service References\Top10\configuration.svcinfo" />
-    <None Include="Service References\Top10\Reference.svcmap">
+    <Content Include="definition.aspx" />
+    <Content Include="NewFocus.aspx" />
+    <None Include="Service References\reqdServices\reqdServices.disco" />
+    <None Include="Service References\reqdServices\configuration91.svcinfo" />
+    <None Include="Service References\reqdServices\configuration.svcinfo" />
+    <None Include="Service References\reqdServices\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -78,13 +80,6 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <None Include="Service References\Top10\ReqdServices.wsdl" />
-    <None Include="Service References\Top10\reqdServices1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\Top10\reqdServices2.xsd">
-      <SubType>Designer</SubType>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="About.aspx.cs">
@@ -129,11 +124,18 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="definition.aspx.cs">
+      <DependentUpon>definition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="definition.aspx.designer.cs">
+      <DependentUpon>definition.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service References\Top10\Reference.cs">
+    <Compile Include="Service References\reqdServices\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -144,6 +146,13 @@
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="NewFocus.aspx.cs">
+      <DependentUpon>NewFocus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewFocus.aspx.designer.cs">
+      <DependentUpon>NewFocus.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -157,10 +166,17 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\Top10\" />
+    <WCFMetadataStorage Include="Service References\reqdServices\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\Top10\reqdServices.xsd">
+    <None Include="Service References\reqdServices\ReqdServices.wsdl" />
+    <None Include="Service References\reqdServices\reqdServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\reqdServices\reqdServices1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\reqdServices\reqdServices2.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>

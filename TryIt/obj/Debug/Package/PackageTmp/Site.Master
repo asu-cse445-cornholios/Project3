@@ -37,7 +37,9 @@
                             Value="Top10 Words"/>
                         <asp:MenuItem NavigateUrl="~/About.aspx" Text="Word Filter" 
                             Value="Word Filter"/>
-                        <asp:MenuItem NavigateUrl="reqdServices.svc" Text="Svc Location" 
+                        <asp:MenuItem NavigateUrl="~/WebForm1.aspx" Text="News Focus" 
+                            Value="News Focus"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="http://webstrar6.fulton.asu.edu/page5/reqdServices.svc" Text="Svc Location" 
                             Value="Svc Location"></asp:MenuItem>
                     </Items>
                 </asp:Menu>

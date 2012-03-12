@@ -16,9 +16,14 @@ namespace TryIt
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            var top10client = new Top10.ReqdServicesClient();
+            var top10client = new reqdServices.ReqdServicesClient();
 
-            top10client.top10Words(txtURL.Text);
+            string[] words = top10client.top10Words(txtURL.Text);
+
+            foreach (string w in words)
+            {
+                TextBox2.Text += w + "\r\n";
+            }
         }
 
         protected void TextBox1_TextChanged(object sender, EventArgs e)

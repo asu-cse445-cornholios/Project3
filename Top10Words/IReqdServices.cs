@@ -20,6 +20,11 @@ namespace Top10Words
         [OperationContract]
         string wordFilter(string text);
 
+        [OperationContract]
+        string[] newsFocus(string[] topics);
+
+        [OperationContract]
+        string[] getDefinition(string word);
         // TODO: Add your service operations here
     }
 
