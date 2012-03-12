@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MusicInfo.SearchTypes
 {
-    class ReleaseGroupSearch
+    public class ReleaseGroupSearch
     {
         public string Artist
         {

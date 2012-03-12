@@ -11,7 +11,7 @@ namespace MusicInfo
     using System.Xml;
 
 
-    class MediaLibrary
+    public static class MediaLibrary
     {
         /// <summary>
         /// Contains base url to service

@@ -6,6 +6,9 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 
+using MusicInfo;
+using MusicInfo.SearchTypes;
+
 namespace MusicLookupService
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService1" in both code and config file together.
@@ -18,6 +21,9 @@ namespace MusicLookupService
 
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
+
+        [OperationContract]
+        ArtistResult[] GetArtists(ArtistSearch search);
 
         // TODO: Add your service operations here
     }

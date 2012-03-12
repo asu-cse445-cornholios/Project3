@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MusicInfo.SearchTypes
 {
-    class WorkResult
+    public class WorkResult
     {
         public string Id
         {
