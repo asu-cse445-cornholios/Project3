@@ -35,15 +35,33 @@ namespace MusicInfo
             //
             // Get and Parse result
             //
-            XPathDocument doc = new XPathDocument(requestUrl);
-            XPathNavigator nav = doc.CreateNavigator();
-            XPathNodeIterator iter = nav.Select("/metadata/artist-list/artist");
+            XPathDocument document = new XPathDocument(requestUrl);
+            XPathNavigator navigater = document.CreateNavigator();
+            XPathNodeIterator artistNodes = navigater.Select("metadata/artist-list/artist");
+
+            XPathNavigator node = artistNodes.Current;
+            node = node.MoveToChild() ;
             
-            while (iter.MoveNext())
+            while (artistNodes.MoveNext())
             {
-                XPathNodeIterator xnode = iter.Current.Select("name");
-                System.Console.WriteLine(xnode.Current.Value);
+                XPathNavigator artistNode = artistNodes.Current;
+                System.Console.WriteLine(artistNode.GetAttribute("id",""));
+
+                XPathNodeIterator nameNode = artistNodes.Current.Select("Name");
+                nameNode.MoveNext();
+
+              // XPathNavigator nameNode = artistNodes.Current.SelectSingleNode("name");
+               //nameNode.
             }
+
+
+            //XPathNavigator nodesNavigator = nodes.Current;
+
+            //XPathNodeIterator nodesText = nodesNavigator.sele
+
+            //while (nodesText.MoveNext())
+            //    Console.WriteLine(nodesText.Current.Value);
+            
 
             return null;
         }
