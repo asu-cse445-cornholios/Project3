@@ -179,7 +179,66 @@ namespace MusicInfo
 
         public static ReleaseResult[] findReleases(ReleaseSearch search)
         {
-            return null;
+            List<ReleaseResult> releases = new List<ReleaseResult>();
+
+            //
+            // Build request Url
+            //
+            string requestUrl = serviceUrl + "/release/?query=";
+
+            if (search.AmazonID != "")
+            {
+                requestUrl += "asin:" + search.AmazonID + " ";
+            }
+            if (search.ArtistID != "")
+            {
+                requestUrl += "arid:" + search.ArtistID + " ";
+            }
+            if (search.ArtistName != "")
+            {
+                requestUrl += "artistname:" + search.ArtistName + " ";
+            }
+            if (search.Label != "")
+            {
+                requestUrl += "label:" + search.Label + " ";
+            }
+            if (search.ReleaseGroupID != "")
+            {
+                requestUrl += "rgid:" + search.ReleaseGroupID + " ";
+            }
+            if (search.ReleaseID != "")
+            {
+                requestUrl += "reid:" + search.ReleaseID + " ";
+            }
+            if (search.ReleaseName != "")
+            {
+                requestUrl += "release:" + search.ReleaseName + " ";
+            }
+
+
+
+            //
+            // Get and Parse result
+            //
+            XmlDocument docRef = new XmlDocument();
+            docRef.Load(requestUrl);
+            XmlNode root = docRef.DocumentElement;
+            XmlNode releaseList = root.FirstChild;
+
+            XmlNodeList releaseNodes = releaseList.ChildNodes;
+            foreach (XmlNode releaseNode in releaseNodes)
+            {
+                ReleaseResult newRelease = new ReleaseResult();
+
+                newRelease.Score = getAttributeValue(releaseNode, "ext:score");
+                newRelease.Id = getAttributeValue(releaseNode, "id");
+                newRelease.Title = getTextChild(getNodeByName(releaseNode, "title"));
+
+                releases.Add(newRelease);
+            }
+
+
+            return releases.ToArray();
         }
 
         public static RecordingResult[] findRecordings(RecordingSearch search)
