@@ -7,5 +7,20 @@ namespace MusicInfo.SearchTypes
 {
     class WorkResult
     {
+        public string Id
+        {
+            get;
+            set;
+        }
+        public string Title
+        {
+            get;
+            set;
+        }
+        public string Alias
+        {
+            get;
+            set;
+        }
     }
 }

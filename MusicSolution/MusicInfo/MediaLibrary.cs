@@ -134,17 +134,164 @@ namespace MusicInfo
 
         public static RecordingResult[] findRecordings(RecordingSearch search)
         {
-            return null;
+            List<RecordingResult> recording = new List<RecordingResult>();
+
+            //
+            // Build request Url
+            //
+            string requestUrl = serviceUrl + "/recording/?query=";
+
+            if (search.Artist != "")
+            {
+                requestUrl += "artist:" + search.Artist + " ";
+            }
+            if (search.Id != "")
+            {
+                requestUrl += "rid:" + search.Id + " ";
+            }
+            if (search.Recording != "")
+            {
+                requestUrl += "recording:" + search.Recording + " ";
+            }
+            if (search.Release != "")
+            {
+                requestUrl += "release:" + search.Release + " ";
+            }
+            if (search.Type != "")
+            {
+                requestUrl += "type:" + search.Type + " ";
+            }
+            if (search.ArtistId != "")
+            {
+                requestUrl += "aid:" + search.ArtistId + " ";
+            }
+
+            System.Console.WriteLine(requestUrl);
+
+            //
+            // Get and Parse result
+            //
+            XmlDocument docRef = new XmlDocument();
+            docRef.Load(requestUrl);
+            XmlNode root = docRef.DocumentElement;
+            XmlNode recordList = root.FirstChild;
+
+            XmlNodeList recordNodes = recordList.ChildNodes;
+            foreach (XmlNode recordNode in recordNodes)
+            {
+                RecordingResult newRecord = new RecordingResult();
+
+                newRecord.Id = getAttributeValue(recordNode, "id");
+                newRecord.Title = getTextChild(getNodeByName(recordNode, "title"));
+                newRecord.Length = getTextChild(getNodeByName(recordNode, "length"));
+
+                recording.Add(newRecord);
+            }
+
+            return recording.ToArray();
         }
 
         public static LabelResult[] findLabels(LabelSearch search)
         {
-            return null;
+            List<LabelResult> label = new List<LabelResult>();
+
+            //
+            // Build request Url
+            //
+            string requestUrl = serviceUrl + "/label/?query=";
+
+            if (search.Name != "")
+            {
+                requestUrl += "label:" + search.Name + " ";
+            }
+            if (search.Alias != "")
+            {
+                requestUrl += "alias:" + search.Alias + " ";
+            }
+            if (search.Type != "")
+            {
+                requestUrl += "type:" + search.Type + " ";
+            }
+
+            System.Console.WriteLine(requestUrl);
+
+            //
+            // Get and Parse result
+            //
+            XmlDocument docRef = new XmlDocument();
+            docRef.Load(requestUrl);
+            XmlNode root = docRef.DocumentElement;
+            XmlNode labelList = root.FirstChild;
+
+            XmlNodeList labelNodes = labelList.ChildNodes;
+            foreach (XmlNode labelNode in labelNodes)
+            {
+                LabelResult newLabel = new LabelResult();
+
+                newLabel.Id = getAttributeValue(labelNode, "id");
+                newLabel.Name = getTextChild(getNodeByName(labelNode, "name"));
+                newLabel.Country = getTextChild(getNodeByName(labelNode, "country")); 
+
+                XmlNode alias = getNodeByName(labelNode, "alias-list");
+                newLabel.Alias = getTextChild(getNodeByName(alias, "alias"));
+
+                label.Add(newLabel);
+            }
+
+            return label.ToArray();
         }
 
         public static WorkResult[] findWorks(WorkSearch search)
         {
-            return null;
+            List<WorkResult> works = new List<WorkResult>();
+
+            //
+            // Build request Url
+            //
+            string requestUrl = serviceUrl + "/work/?query=";
+
+            if (search.Artist != "")
+            {
+                requestUrl += "artist:" + search.Artist + " ";
+            }
+            if (search.Work != "")
+            {
+                requestUrl += "work:" + search.Work + " ";
+            }
+            if (search.WorkID != "")
+            {
+                requestUrl += "wid:" + search.WorkID + " ";
+            }
+            if (search.WorkType != "")
+            {
+                requestUrl += "type:" + search.WorkType + " ";
+            }
+
+            System.Console.WriteLine(requestUrl);
+
+            //
+            // Get and Parse result
+            //
+            XmlDocument docRef = new XmlDocument();
+            docRef.Load(requestUrl);
+            XmlNode root = docRef.DocumentElement;
+            XmlNode workList = root.FirstChild;
+
+            XmlNodeList workNodes = workList.ChildNodes;
+            foreach (XmlNode workNode in workNodes)
+            {
+                WorkResult newWork = new WorkResult();
+
+                newWork.Id = getAttributeValue(workNode, "id");
+                newWork.Title = getTextChild(getNodeByName(workNode, "title"));
+
+                XmlNode alias = getNodeByName(workNode, "alias-list");
+                newWork.Alias = getTextChild(getNodeByName(alias, "alias"));
+
+                works.Add(newWork);
+            }
+
+            return works.ToArray();
         }
     }
 }
