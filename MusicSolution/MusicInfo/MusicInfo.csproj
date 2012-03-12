@@ -48,6 +48,16 @@
     <Compile Include="MediaLibrary.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchTypes\LabelResult.cs" />
+    <Compile Include="SearchTypes\LabelSearch.cs" />
+    <Compile Include="SearchTypes\RecordingResult.cs" />
+    <Compile Include="SearchTypes\RecordingSearch.cs" />
+    <Compile Include="SearchTypes\ReleaseGroupResult.cs" />
+    <Compile Include="SearchTypes\ReleaseGroupSearch.cs" />
+    <Compile Include="SearchTypes\ReleaseResult.cs" />
+    <Compile Include="SearchTypes\ReleaseSearch.cs" />
+    <Compile Include="SearchTypes\WorkResult.cs" />
+    <Compile Include="SearchTypes\WorkSearch.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -75,6 +75,7 @@ namespace MusicInfo
             return null;
         }
 
+
         public static ArtistResult[] findArtists(ArtistSearch search)
         {
             List<ArtistResult> artists = new List<ArtistResult>();
@@ -121,5 +122,29 @@ namespace MusicInfo
             return artists.ToArray();
         }
 
+        public static ReleaseGroupResult[] findReleaseGroups(ReleaseGroupSearch search)
+        {
+            return null;
+        }
+
+        public static ReleaseResult[] findReleases(ReleaseSearch search)
+        {
+            return null;
+        }
+
+        public static RecordingResult[] findRecordings(RecordingSearch search)
+        {
+            return null;
+        }
+
+        public static LabelResult[] findLabels(LabelSearch search)
+        {
+            return null;
+        }
+
+        public static WorkResult[] findWorks(WorkSearch search)
+        {
+            return null;
+        }
     }
 }
