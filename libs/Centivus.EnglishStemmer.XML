@@ -1,0 +1,278 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Centivus.EnglishStemmer</name>
+    </assembly>
+    <members>
+        <member name="M:EnglishStemmer.EnglishWord.#ctor">
+            <summary>
+            Default constructor for Unit Testing
+            </summary>
+        </member>
+        <member name="M:EnglishStemmer.EnglishWord.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="input">Text that we use to build the Stem</param>
+        </member>
+        <member name="M:EnglishStemmer.EnglishWord.Create(System.String)">
+            <summary>
+            Refactored construction. Gets the object into the correct initial state
+            </summary>
+            <param name="input"></param>
+        </member>
+        <member name="M:EnglishStemmer.EnglishWord.IsException2">
+             <summary>
+            define exception2 as (
+            [substring] atlimit among(
+                'inning' 'outing' 'canning' 'herring' 'earring'
+                'proceed' 'exceed' 'succeed'
+            
+                // ... extensions possible here ...
+            )
+             </summary>
+             <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:EnglishStemmer.EnglishWord.IsException1" -->
+        <member name="M:EnglishStemmer.EnglishWord.Finally">
+             <summary>
+            Finally, turn any remaining Y letters in the word back into lower case. 
+             </summary>
+        </member>
+        <member name="M:EnglishStemmer.EnglishWord.StripSuffixStep5">
+             <summary>
+             Step 5: * Search for the the following suffixes, and, if found, perform the action indicated. 
+            e delete if in R2, or in R1 and not preceded by a short syllable 
+             l delete if in R2 and preceded by l 
+             </summary>
+        </member>
+        <member name="M:EnglishStemmer.EnglishWord.StripSuffixStep4">
+            <summary>
+            Step 4: Search for the longest among the following suffixes, and, if found and in R2, perform the action indicated. 
+            al   ance   ence   er   ic   able   ible   ant   ement   ment   ent   ism   ate   iti   ous   ive   ize delete 
+            ion delete if preceded by s or t 
+            </summary>
+        </member>
+        <member name="M:EnglishStemmer.EnglishWord.ReplaceEndingStep3">
+             <summary>
+             Step 3: 
+            Search for the longest among the following suffixes, and, if found and in R1, perform the action indicated. 
+            
+            tional+:   replace by tion 
+            ational+:   replace by ate 
+            alize:   replace by al 
+            icate   iciti   ical:   replace by ic 
+            ful   ness:   delete 
+            ative*:   delete if in R2 
+             </summary>
+        </member>
+        <member name="M:EnglishStemmer.EnglishWord.ReplaceEndingStep2">
+             <summary>
+             Step 2: 
+            Search for the longest among the following suffixes, and, if found and in R1, perform the action indicated.
+            
+            tional:   replace by tion 
+            enci:   replace by ence 
+            anci:   replace by ance 
+            abli:   replace by able 
+            entli:   replace by ent 
+            izer   ization:   replace by ize 
+            ational   ation   ator:   replace by ate 
+            alism   aliti   alli:   replace by al 
+            fulness:   replace by ful 
+            ousli   ousness:   replace by ous 
+            iveness   iviti:   replace by ive 
+            biliti   bli+:   replace by ble 
+            ogi+:   replace by og if preceded by l 
+            fulli+:   replace by ful 
+            lessli+:   replace by less 
+            li+:   delete if preceded by a valid li-ending
+             </summary>
+        </member>
+        <member name="M:EnglishStemmer.EnglishWord.ReplaceSuffixStep1c">
+            <summary>
+            replace suffix y or Y by i if preceded by a non-vowel which is not the first letter of the word (so cry -> cri, by -> by, say -> say)
+            </summary>
+        </member>
+        <member name="M:EnglishStemmer.EnglishWord.StandardiseApostrophesAndStripLeading">
+            <summary>
+            Converts all quote variants `’ " to standard '. Removes an open quote in First char
+            </summary>
+        </member>
+        <member name="M:EnglishStemmer.EnglishWord.CalculateR(System.String,System.Int32)">
+            <summary>
+            R1 is the region after the first non-vowel following a vowel, or is the null region at the end of the word if there is no such non-vowel. 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EnglishStemmer.EnglishWord.StripSuffixStep1b">
+             <summary>
+             Search for the longest among the following suffixes, and perform the action indicated. 
+             eed   eedly+
+            		replace by ee if in R1 
+            
+            ed   edly+   ing   ingly+ 
+            		delete if the preceding word part contains a vowel, and then 
+            		if the word ends at, bl or iz add e (so luxuriat -> luxuriate), or 
+            		if the word ends with a double remove the last letter (so hopp -> hop), or 
+            		if the word is short, add e (so hop -> hope) 
+             </summary>
+        </member>
+        <member name="M:EnglishStemmer.EnglishWord.IsShortWord">
+            <summary>
+            A word is called short if it ends in a short syllable, and if R1 is null. 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EnglishStemmer.EnglishWord.IsShortSyllable(System.Int32)">
+            <summary>
+            Define a short syllable in a word as either 
+            (a) a vowel followed by a non-vowel other than w, x or Y and preceded by a non-vowel, or * 
+            (b) a vowel at the beginning of the word followed by a non-vowel. 
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EnglishStemmer.EnglishWord.StripSuffixStep1a">
+             <summary>
+             Search for the longest among the following suffixes, and perform the action indicated.
+            	sses 
+            		replace by ss 
+            		
+            	ied+   ies* 
+            		replace by i if preceded by more than one letter, otherwise by ie (so ties -> tie, cries -> cri) 
+            
+            	s 
+            		delete if the preceding word part contains a vowel not immediately before the s (so gas and this retain the s, gaps and kiwis lose it)
+            
+            	us+   ss 
+            		do nothing 
+             </summary>
+        </member>
+        <member name="M:EnglishStemmer.EnglishWord.StripTrailingApostrophe">
+            <summary>
+            Handle the three forms of closing apostrophe
+            </summary>
+        </member>
+        <member name="M:EnglishStemmer.Stemmer.StemWords(System.Collections.Generic.IEnumerable{System.String})">
+              Takes a list of line and returns them reduced to their stems.
+            
+              line can be either a string or an array. If it is a string, it will
+              be split into separate line on whitespace, commas, or semicolons. If
+              an array, it assumes one word per element.
+            
+              @param mixed line String or array of word(s) to reduce
+              @access public
+              @return array List of word stems
+        </member>
+        <member name="M:EnglishStemmer.Stemmer.Step1(System.String)">
+              Performs the functions of steps 1a and 1b of the Porter Stemming Algorithm.
+            
+              First, if the word is in plural form, it is reduced to singular form.
+              Then, any -ed or -ing endings are removed as appropriate, and finally,
+              line ending in "y" with a vowel in the Stem have the "y" changed to "i".
+            
+              @param string $word Word to reduce
+              @access private
+              @return string Reduced word
+        </member>
+        <member name="M:EnglishStemmer.Stemmer.Step2(System.String)">
+              Performs the function of step 2 of the Porter Stemming Algorithm.
+            
+              Step 2 maps double suffixes to single ones when the second-to-last character
+              matches the given letters. So "-ization" (which is "-ize" plus "-ation"
+              becomes "-ize". Mapping to a single character occurence speeds up the script
+              by reducing the number of possible string searches.
+            
+              Note: for this step (and steps 3 and 4), the algorithm requires that if
+              a suffix match is found (checks longest first), then the step ends, regardless
+              if a replacement occurred. Some (or many) implementations simply keep
+              searching though a list of suffixes, even if one is found.
+            
+              @param string $word Word to reduce
+              @access private
+              @return string Reduced word
+        </member>
+        <member name="M:EnglishStemmer.Stemmer.Step3(System.String)">
+              Performs the function of step 3 of the Porter Stemming Algorithm.
+            
+              Step 3 works in a similar stragegy to step 2, though checking the
+              last character.
+            
+              @param string $word Word to reduce
+              @access private
+              @return string Reduced word
+        </member>
+        <member name="M:EnglishStemmer.Stemmer.Step4(System.String)">
+              Performs the function of step 4 of the Porter Stemming Algorithm.
+            
+              Step 4 works similarly to steps 3 and 2, above, though it removes
+              the endings in the context of VCVC (vowel-consonant-vowel-consonant
+              combinations).
+            
+              @param string $word Word to reduce
+              @access private
+              @return string Reduced word
+        </member>
+        <member name="M:EnglishStemmer.Stemmer.Step5(System.String)">
+              Performs the function of step 5 of the Porter Stemming Algorithm.
+            
+              Step 5 removes a final "-e" and changes "-ll" to "-l" in the context
+              of VCVC (vowel-consonant-vowel-consonant combinations).
+            
+              @param string $word Word to reduce
+              @access private
+              @return string Reduced word
+        </member>
+        <member name="M:EnglishStemmer.Stemmer.is_consonant(System.String,System.Int32)">
+              Checks that the specified letter (position) in the word is a consonant.
+            
+              Handy check adapted from the ANSI C program. Regular vowels always return
+              FALSE, while "y" is a special case: if the prececing character is a vowel,
+              "y" is a consonant, otherwise it's a vowel.
+            
+              And, if checking "y" in the first position and the word starts with "yy",
+              return true even though it's not a legitimate word (it crashes otherwise).
+            
+              @param string $word Word to check
+              @param integer $pos Position in the string to check
+              @access public
+              @return boolean
+        </member>
+        <member name="M:EnglishStemmer.Stemmer.count_vc(System.String)">
+              Counts (measures) the number of vowel-consonant occurences.
+            
+              Based on the algorithm; this handy function counts the number of
+              occurences of vowels (1 or more) followed by consonants (1 or more),
+              ignoring any beginning consonants or trailing vowels. A legitimate
+              VC combination counts as 1 (ie. VCVC = 2, VCVCVC = 3, etc.).
+            
+              @param string $word Word to measure
+              @access public
+              @return integer
+        </member>
+        <member name="M:EnglishStemmer.Stemmer._o(System.String)">
+              Checks for a specific consonant-vowel-consonant condition.
+            
+              This function is named directly from the original algorithm. It
+              looks the last three characters of the word ending as
+              consonant-vowel-consonant, with the final consonant NOT being one
+              of "w", "x" or "y".
+            
+              @param string $word Word to check
+              @access private
+              @return boolean
+        </member>
+        <member name="M:EnglishStemmer.Stemmer.ReplaceSuffix(System.String@,System.String,System.String,System.Int32)">
+              Replaces suffix, if found and word measure is a minimum count.
+            
+              @param string $word Word to check and modify
+              @param string $suffix Suffix to look for
+              @param string $replace Suffix replacement
+              @param integer $m Word measure value that the word must be greater
+                                than to replace
+              @access private
+              @return boolean
+        </member>
+    </members>
+</doc>
