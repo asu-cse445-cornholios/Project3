@@ -58,13 +58,15 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Properties\PublishProfiles\ASU Debug.pubxml" />
+    <None Include="Properties\PublishProfiles\ASU Release.pubxml" />
     <None Include="Service References\StemmingServiceProxy\configuration91.svcinfo" />
     <None Include="Service References\StemmingServiceProxy\configuration.svcinfo" />
     <None Include="Service References\StemmingServiceProxy\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <Content Include="StemmingServiceTryItPage.aspx" />
+    <Content Include="TryIt.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -74,12 +76,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="StemmingServiceTryItPage.aspx.cs">
-      <DependentUpon>StemmingServiceTryItPage.aspx</DependentUpon>
+    <Compile Include="TryIt.aspx.cs">
+      <DependentUpon>TryIt.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="StemmingServiceTryItPage.aspx.designer.cs">
-      <DependentUpon>StemmingServiceTryItPage.aspx</DependentUpon>
+    <Compile Include="TryIt.aspx.designer.cs">
+      <DependentUpon>TryIt.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

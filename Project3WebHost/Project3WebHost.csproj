@@ -86,7 +86,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\PublishProfiles\ASU.pubxml" />
+    <None Include="Properties\PublishProfiles\ASU Debug.pubxml" />
+    <None Include="Properties\PublishProfiles\ASU Release.pubxml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
