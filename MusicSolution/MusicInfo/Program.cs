@@ -11,10 +11,14 @@ namespace MusicInfo
     {
         static void Main(string[] args)
         {
+            //Test artist search
             ArtistSearch search = new ArtistSearch();
             search.Artist = "Scorpions";
 
-            ArtistResult result = MediaLibrary.findArtists(search);
+            ArtistResult[] result = MediaLibrary.findArtists(search);
+
+            // Test others
+            return;
         }
     }
 }

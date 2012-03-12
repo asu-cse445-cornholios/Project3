@@ -8,6 +8,7 @@ namespace MusicInfo
 {
     using SearchTypes;
     using System.IO;
+    using System.Xml;
 
 
     class MediaLibrary
@@ -15,11 +16,69 @@ namespace MusicInfo
         /// <summary>
         /// Contains base url to service
         /// </summary>
-        private static string serviceUrl = "http://www.musicbrainz.org/ws/2"; 
+        private static string serviceUrl = "http://www.musicbrainz.org/ws/2";
 
-
-        public static ArtistResult findArtists(ArtistSearch search)
+        /// <summary>
+        /// Gets the child text value for node
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        private static string getTextChild(XmlNode node)
         {
+            if (node == null)
+                return "";
+            else
+            {
+                return node.FirstChild.InnerText;
+            }
+        }
+
+        /// <summary>
+        /// Gets attribute attached to node
+        /// </summary>
+        /// <param name="node"></param>
+        /// <param name="attributeName"></param>
+        /// <returns></returns>
+        private static string getAttributeValue(XmlNode node, string attributeName)
+        {
+            string ret = "";
+            foreach (XmlAttribute attr in node.Attributes)
+            {
+                if (attr.Name == attributeName)
+                {
+                    ret = attr.Value;
+                    break;
+                }
+            }
+
+            return ret;
+        }
+
+        /// <summary>
+        /// Gets the child node of a parent by name
+        /// </summary>
+        /// <param name="parentNode"></param>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        private static XmlNode getNodeByName(XmlNode parentNode, string name)
+        {
+            if (parentNode == null)
+                return null;
+
+            foreach (XmlNode node in parentNode.ChildNodes)
+            {
+                if (node.Name == name)
+                {
+                    return node;
+                }
+            }
+            return null;
+        }
+
+        public static ArtistResult[] findArtists(ArtistSearch search)
+        {
+            List<ArtistResult> artists = new List<ArtistResult>();
+
             //
             // Build request Url
             //
@@ -35,35 +94,31 @@ namespace MusicInfo
             //
             // Get and Parse result
             //
-            XPathDocument document = new XPathDocument(requestUrl);
-            XPathNavigator navigater = document.CreateNavigator();
-            XPathNodeIterator artistNodes = navigater.Select("metadata/artist-list/artist");
+            XmlDocument docRef = new XmlDocument();
+            docRef.Load(requestUrl);
+            XmlNode root = docRef.DocumentElement;
+            XmlNode artistList = root.FirstChild;
 
-            XPathNavigator node = artistNodes.Current;
-            node = node.MoveToChild() ;
-            
-            while (artistNodes.MoveNext())
+            XmlNodeList artistNodes = artistList.ChildNodes;
+            foreach (XmlNode artistNode in artistNodes)
             {
-                XPathNavigator artistNode = artistNodes.Current;
-                System.Console.WriteLine(artistNode.GetAttribute("id",""));
+                ArtistResult newArtist = new ArtistResult();
 
-                XPathNodeIterator nameNode = artistNodes.Current.Select("Name");
-                nameNode.MoveNext();
+                newArtist.Score = getAttributeValue(artistNode,"ext:score");
+                newArtist.Id = getAttributeValue(artistNode,"id");
+                newArtist.Name = getTextChild(getNodeByName(artistNode, "name"));
+                newArtist.Country = getTextChild(getNodeByName(artistNode, "country"));
 
-              // XPathNavigator nameNode = artistNodes.Current.SelectSingleNode("name");
-               //nameNode.
+                XmlNode lifeSpan = getNodeByName(artistNode, "life-span");
+                newArtist.Begin = getTextChild(getNodeByName(lifeSpan, "begin"));
+                newArtist.End = getTextChild(getNodeByName(lifeSpan, "end"));
+
+                artists.Add(newArtist);
             }
-
-
-            //XPathNavigator nodesNavigator = nodes.Current;
-
-            //XPathNodeIterator nodesText = nodesNavigator.sele
-
-            //while (nodesText.MoveNext())
-            //    Console.WriteLine(nodesText.Current.Value);
             
 
-            return null;
+
+            return artists.ToArray();
         }
 
     }
