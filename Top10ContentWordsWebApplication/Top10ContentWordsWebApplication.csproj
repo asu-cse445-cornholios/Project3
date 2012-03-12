@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\PublishProfiles\ASU Debug.pubxml" />
+    <None Include="Properties\PublishProfiles\ASU Release.pubxml" />
     <None Include="Service References\Top10ContentWordsServiceProxy\configuration91.svcinfo" />
     <None Include="Service References\Top10ContentWordsServiceProxy\configuration.svcinfo" />
     <None Include="Service References\Top10ContentWordsServiceProxy\Reference.svcmap">
@@ -66,7 +67,9 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="TryIt.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />

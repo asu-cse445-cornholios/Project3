@@ -10,15 +10,15 @@ namespace StemmingServiceLibrary
 {
     public class StemmingService : IStemmingService
     {
-        private string regExMatch = @"\w+";
+       private readonly Regex _regExMatch = new Regex(@"\w+", RegexOptions.Compiled);
+
         public string Stemming(string str)
         {
             if (String.IsNullOrWhiteSpace(str))
             {
                 return String.Empty;
             }
-            Regex regEx = new Regex(regExMatch);
-            var result = regEx.Replace(str, new MatchEvaluator(ReplaceWordWithStem));
+            var result = _regExMatch.Replace(str, new MatchEvaluator(ReplaceWordWithStem));
             return result;
             
         }

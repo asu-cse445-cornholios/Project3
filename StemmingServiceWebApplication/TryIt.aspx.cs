@@ -30,12 +30,12 @@ namespace StemmingServiceWebApplication
             }
             catch (TimeoutException timeout)
             {
-                // Handle the timeout exception.
+                lblResult.Text = timeout.Message;
                 proxy.Abort();
             }
             catch (CommunicationException commException)
             {
-                // Handle the communication exception.
+                lblResult.Text = commException.Message;
                 proxy.Abort();
             }
 
