@@ -19,6 +19,6 @@ namespace ShoppingCartServiceLibrary
         public DateTime Modified { get; set; }
 
         [DataMember]
-        public virtual ICollection<CartItem> CartItems { get; set; }
+        public ICollection<CartItem> CartItems { get; set; }
     }
 }

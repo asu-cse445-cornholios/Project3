@@ -38,7 +38,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="EntityFramework, Version=4.3.1.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.4.3.1\lib\net40\EntityFramework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -56,7 +65,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -76,16 +87,29 @@
       <Project>{f31c7c24-9ae9-4e3c-9cd5-ba99f09849c2}</Project>
       <Name>ShoppingCartServiceLibrary</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ShoppingCartServiceWebApplication\ShoppingCartServiceWebApplication.csproj">
+      <Project>{0dddeed1-eddf-47d6-a4e5-83a427024a46}</Project>
+      <Name>ShoppingCartServiceWebApplication</Name>
+    </ProjectReference>
     <ProjectReference Include="..\StemmingServiceLibrary\StemmingServiceLibrary.csproj">
       <Project>{15b3e0d2-6217-493a-a690-158c497f5318}</Project>
       <Name>StemmingServiceLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StemmingServiceWebApplication\StemmingServiceWebApplication.csproj">
+      <Project>{383eb593-17f0-4257-b877-e3f335b6289b}</Project>
+      <Name>StemmingServiceWebApplication</Name>
     </ProjectReference>
     <ProjectReference Include="..\Top10ContentWordsServiceLibrary\Top10ContentWordsServiceLibrary.csproj">
       <Project>{c486e0ee-fc75-462f-a966-7aabf37c51eb}</Project>
       <Name>Top10ContentWordsServiceLibrary</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Top10ContentWordsWebApplication\Top10ContentWordsWebApplication.csproj">
+      <Project>{ec6e1c98-3ddf-4da7-8091-51cccf2f1a03}</Project>
+      <Name>Top10ContentWordsWebApplication</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="packages.config" />
     <None Include="Properties\PublishProfiles\ASU Debug.pubxml" />
     <None Include="Properties\PublishProfiles\ASU Release.pubxml" />
   </ItemGroup>
@@ -102,7 +126,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>48729</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:1278/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
@@ -114,6 +138,10 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

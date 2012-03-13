@@ -31,7 +31,7 @@ namespace ShoppingCartServiceLibrary
         public DateTime Modified { get; set; }
 
         [DataMember]
-        public virtual ShoppingCart ShoppingCart { get; set; }
+        public ShoppingCart ShoppingCart { get; set; }
 
     }
 }

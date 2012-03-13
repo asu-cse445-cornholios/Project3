@@ -58,6 +58,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Properties\PublishProfiles\ASU Debug.pubxml" />
     <None Include="Service References\ShoppingCartServiceProxy\configuration91.svcinfo" />
     <None Include="Service References\ShoppingCartServiceProxy\configuration.svcinfo" />
     <None Include="Service References\ShoppingCartServiceProxy\Reference.svcmap">

@@ -18,17 +18,23 @@ namespace ShoppingCartServiceLibrary
         {
             using (var db = new ShoppingCartContext())
             {
-                var shoppingCart = GetCart(shoppingCartId);
-                var cartItem = new CartItem
-                                   {
-                                       Created = DateTime.Now,
-                                       Modified = DateTime.Now,
-                                       Item = item,
-                                       Quantity = quantity,
-                                       Price = 5.0
-                                   };
-                shoppingCart.CartItems.Add(cartItem);
-                shoppingCart.Modified = DateTime.Now;
+                var shoppingCart = (from c in db.ShoppingCarts.Include("CartItems")
+                                    where c.ShoppingCartId == shoppingCartId
+                                    select c).FirstOrDefault();
+                if (shoppingCart != null)
+                {
+                    var cartItem = new CartItem
+                    {
+                        ShoppingCartId = shoppingCartId,
+                        Created = DateTime.Now,
+                        Modified = DateTime.Now,
+                        Item = item,
+                        Quantity = quantity,
+                        Price = 5.0
+                    };
+                    db.CartItems.Add(cartItem);
+                    shoppingCart.Modified = DateTime.Now;
+                }
                 return db.SaveChanges() > 0;
             }
         }
@@ -37,9 +43,20 @@ namespace ShoppingCartServiceLibrary
         {
             using (var db = new ShoppingCartContext())
             {
-                var shoppingCart = GetCart(shoppingCartId);
-                shoppingCart.CartItems.Clear();
-                shoppingCart.Modified = DateTime.Now;
+                var shoppingCart = (from c in db.ShoppingCarts.Include("CartItems")
+                                    where c.ShoppingCartId == shoppingCartId
+                                    select c).FirstOrDefault();
+                if (shoppingCart != null)
+                {
+                    if (shoppingCart.CartItems != null)
+                    {
+                        foreach (var cartItem in shoppingCart.CartItems.ToArray())
+                        {
+                            db.CartItems.Remove(cartItem);
+                        }
+                    }
+                    shoppingCart.Modified = DateTime.Now;
+                }
                 return db.SaveChanges() > 0;
             }
         }
@@ -80,8 +97,8 @@ namespace ShoppingCartServiceLibrary
                     return false;
                 }
                 cartItem.Quantity = quantity;
-                cartItem.ShoppingCart.Modified = DateTime.Now;
                 cartItem.Modified = DateTime.Now;
+                cartItem.ShoppingCart.Modified = DateTime.Now;
                 return db.SaveChanges() > 0;
             }
         }
@@ -108,9 +125,13 @@ namespace ShoppingCartServiceLibrary
         {
             using (var db = new ShoppingCartContext())
             {
-                var shoppingCart = GetCart(shoppingCartId);
-                shoppingCart.CartItems.Clear();
-                db.ShoppingCarts.Remove(shoppingCart);
+                var shoppingCart = (from c in db.ShoppingCarts.Include("CartItems")
+                                    where c.ShoppingCartId == shoppingCartId
+                                    select c).FirstOrDefault();
+                if (shoppingCart != null)
+                {
+                    db.ShoppingCarts.Remove(shoppingCart);
+                }
                 return db.SaveChanges() > 0;
             }
         }
