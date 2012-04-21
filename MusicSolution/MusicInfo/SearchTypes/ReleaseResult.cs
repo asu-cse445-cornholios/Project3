@@ -22,7 +22,25 @@ namespace MusicInfo.SearchTypes
             get;
             set;
         }
-
-
+        public string Date
+        {
+            get;
+            set;
+        }
+        public string Artist
+        {
+            get;
+            set;
+        }
+        public string Type
+        {
+            get;
+            set;
+        }
+        public string TrackCount
+        {
+            get;
+            set;
+        }
     }
 }

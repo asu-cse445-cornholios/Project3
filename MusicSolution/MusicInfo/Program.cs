@@ -11,15 +11,19 @@ namespace MusicInfo
     {
         static void Main(string[] args)
         {
-            //Test artist search
-            ArtistSearch search1 = new ArtistSearch();
-            search1.Artist = "Scorpions";
-            ArtistResult[] result1 = MediaLibrary.findArtists(search1);
+            ReleaseSearch search = new ReleaseSearch();
+            search.ArtistName = "scorpions";
+            ReleaseResult[] result = MediaLibrary.findReleases(search);
 
-            // Test others
-            RecordingSearch search2 = new RecordingSearch();
-            search2.Recording = "Comeblack";
-            RecordingResult[] result2 = MediaLibrary.findRecordings(search2); 
+            foreach (ReleaseResult r in result)
+            {
+                Console.WriteLine("Album name: " + r.Title);
+                Console.WriteLine("Date: " + r.Date);
+                Console.WriteLine("Artist: " + r.Artist);
+                Console.WriteLine("Type: " + r.Type);
+                Console.WriteLine("Track Count: " + r.TrackCount);
+                Console.WriteLine();
+            }
 
             return;
         }

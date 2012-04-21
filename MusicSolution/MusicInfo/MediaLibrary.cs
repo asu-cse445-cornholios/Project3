@@ -233,6 +233,16 @@ namespace MusicInfo
                 newRelease.Score = getAttributeValue(releaseNode, "ext:score");
                 newRelease.Id = getAttributeValue(releaseNode, "id");
                 newRelease.Title = getTextChild(getNodeByName(releaseNode, "title"));
+                newRelease.Date = getTextChild(getNodeByName(releaseNode, "date"));
+                newRelease.Type = getAttributeValue(getNodeByName(releaseNode, "release-group"), "type");
+
+                XmlNode mediumListNode = getNodeByName(releaseNode, "medium-list");
+                newRelease.TrackCount = getTextChild(getNodeByName(mediumListNode, "track-count"));
+
+                XmlNode artistCreditNode =  getNodeByName(releaseNode, "artist-credit");
+                XmlNode nameCreditNode = getNodeByName(artistCreditNode, "name-credit");
+                XmlNode artistNode = getNodeByName(nameCreditNode, "artist");
+                newRelease.Artist = getTextChild(getNodeByName(artistNode, "name"));
 
                 releases.Add(newRelease);
             }
